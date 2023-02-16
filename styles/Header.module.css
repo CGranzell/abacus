@@ -3,7 +3,6 @@
   width: 100%;
   background-color: #f3f3ec;
   border-bottom: 3px solid black;
-  /* border: 1px solid black; */
   display: flex;
 }
 
@@ -11,7 +10,6 @@
 .logoContainer {
   height: 100%;
   width: 20%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
 }
@@ -19,21 +17,25 @@
 .logoWrapper {
   height: 100%;
   width: 50%;
-  /* border: 1px solid black; */
   position: relative;
+  
 }
 
 .logo{
 height: 100%;
 width: 100%;
 object-fit: contain;
+transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 }
 
 /* page links */
 .pageLinksContainer {
   height: 100%;
   width: 60%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -43,6 +45,11 @@ object-fit: contain;
   text-decoration: none;
   font-size: 1.3rem;
   color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.pageLinksContainer a:hover{
+  transform: scale(1.1);
 }
 
 /* login  */
@@ -61,6 +68,11 @@ object-fit: contain;
 .icon{
   height: 3rem;
   width: 3rem;
+  transition: 0.3s ease-in-out;
+}
+
+.icon:hover {
+ transform: scale(1.1);
 }
 
 
