@@ -1,10 +1,33 @@
+'use client';
+import React, { useState, useRef } from 'react';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
 import logo from '../public/images/image.png';
 import Link from 'next/link';
 import { BsPersonCircle } from 'react-icons/bs';
+import useOutsideClick from '@/hooks/useOutsideClick';
+import NavItem from './NavItem';
+import NavItemBurger from './NavItemBurger';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef();
+
+  // Hanterar klick utanför hamburgermeny
+  useOutsideClick(ref, () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  });
+
+  // Hantera hamburgermeny öppen/stängd
+  const handleBurger = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  // Hantera css klass om hamburger är öppen/stängd
+  const clicked = isOpen ? styles.hamburgerOpen : styles.hamburgerClosed;
+
   return (
     <nav className={styles.mainContainer}>
       <div className={styles.logoContainer}>
@@ -14,11 +37,22 @@ const Header = () => {
           </Link>
         </div>
       </div>
+      {/* Hamburger */}
+    
+      <div className={clicked} onClick={handleBurger}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+        {/* Hamburger länkar */}
+      {isOpen && (
+        <div className={styles.burgerMenu} ref={ref}>
+          <NavItemBurger setIsOpen={setIsOpen} />
+        </div>
+      )}
+      {/* Desktop länkar  */}
       <div className={styles.pageLinksContainer}>
-        <Link href={'/'}>Nyheter</Link>
-        <Link href={'/'}>Om Oss</Link>
-        <Link href={'/'}>Kontakt</Link>
-        <Link href={'/'}>Schema</Link>
+        <NavItem />
       </div>
       <div className={styles.loginContainer}>
         <Link href={'/'}>

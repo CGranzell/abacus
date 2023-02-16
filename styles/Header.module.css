@@ -62,3 +62,129 @@ object-fit: contain;
   height: 3rem;
   width: 3rem;
 }
+
+
+/* Hamburger Meny */
+
+/* Closed Menu */
+.hamburgerClosed {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* transition: 2s; */
+  /* border: 1px solid black; */
+}
+
+.hamburgerClosed div{
+  height: 4px;
+  width: 30px;
+  background-color: black;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.hamburgerClosed:hover {
+  cursor: pointer;
+}
+
+/* Opened Menu */
+.hamburgerOpen {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border: 1px solid black; */
+}
+
+.hamburgerOpen div{
+  height: 4px;
+  width: 30px;
+  background-color: black;
+  
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.hamburgerOpen div:nth-child(1){
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+ 
+}
+.hamburgerOpen div:nth-child(2){
+ 
+  transform: translateX(-30px);
+  opacity: 0;
+  
+}
+.hamburgerOpen div:nth-child(3){
+  transform: rotate(-45deg) translateY(-6px) translateX(6px);
+  
+}
+
+.hamburgerOpen:hover {
+  cursor: pointer;
+}
+
+/* burger menu */
+.burgerMenu {
+  position: absolute;
+  top: 4.9rem;
+  right: 0;
+  height: 70vh;
+  width: 70%;
+  border: 2px solid rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  animation: showMe 0.5s forwards;
+  
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.burgerMenu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 5px 15px;
+}
+
+@keyframes showMe{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+@keyframes hideMe{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 699px) {
+  .pageLinksContainer,
+  .loginContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 699px) {
+  .hamburgerOpen,
+  .hamburgerClosed {
+    display: none;
+  }
+}
