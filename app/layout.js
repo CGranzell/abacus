@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from '@/components/Header';
 import { Montserrat } from '@next/font/google';
+import Footer from '@/components/Footer';
 
 // Montserrat font
 export const montserrat = Montserrat({
@@ -11,12 +12,11 @@ export const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.className}>
-     
       <head />
       <body>
         <Header />
-
-        {children}
+          {children}
+        <Footer />
       </body>
     </html>
   );
