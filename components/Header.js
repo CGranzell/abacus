@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
-import logo from '../public/images/image.png';
+import logo from '../public/images/logga.png';
 import Link from 'next/link';
 import { BsPersonCircle } from 'react-icons/bs';
 import useOutsideClick from '@/hooks/useOutsideClick';
