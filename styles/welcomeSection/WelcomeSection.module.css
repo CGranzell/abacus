@@ -1,0 +1,12 @@
+.mainContainer {
+  height: 30rem;
+  width: 100%;
+  /* border: 1px solid black; */
+  position: relative;
+}
+
+.mathImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
