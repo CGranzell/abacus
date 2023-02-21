@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from '../../styles/upComingEvents/EventCard.module.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import Modal from '../Modal';
+import Modal from '../EventModal';
 
 
 const EventCard = ( { event }) => {
@@ -16,6 +16,7 @@ const EventCard = ( { event }) => {
   <>
       <Modal
       event={event}
+      date={date}
         shown={modalShown}
         close={() => {
           toggleModal(false);
