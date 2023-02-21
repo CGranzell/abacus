@@ -1,13 +1,14 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import UpComingEvents from '@/components/upComingEvents/UpComingEvents';
+import WelcomeSection from '@/components/welcomeSection/WelcomeSection';
 import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
   return (
-   <>
-    
-   </>
+   <div className={styles.mainContainer}>
+    <WelcomeSection />
+    <UpComingEvents />
+   </div>
   )
 }
