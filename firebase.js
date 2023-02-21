@@ -6,14 +6,13 @@ import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: `${process.env.API_KEY}`,
-  authDomain: "abacus-f82c6.firebaseapp.com",
-  projectId: "abacus-f82c6",
-  storageBucket: "abacus-f82c6.appspot.com",
-  messagingSenderId: "747398820427",
-  appId: "1:747398820427:web:30bb2df22f3908288fd3ce",
-  measurementId: "G-2G24BFBYP1"
-};
-
+  authDomain: `${process.env.AUTH_DOMAIN}`,
+  projectId: `${process.env.PROJECT_ID}`,
+  storageBucket: `${process.env.STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.MESSAGING_SENDER_ID}`,
+  appId: `${process.env.APP_ID}`,
+  measurementId: `${process.env.MEASURMENT_ID}`,
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
