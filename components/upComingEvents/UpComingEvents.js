@@ -36,7 +36,7 @@ const UpComingEvents = () => {
           
           return (
             
-            <EventCard event={event}/>
+            <EventCard key={event.id} event={event}/>
             
           )
         })}
