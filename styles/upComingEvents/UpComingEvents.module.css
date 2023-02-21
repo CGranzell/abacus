@@ -22,9 +22,34 @@
 /* Kort container */
 .cardContainer {
   width: 80%;
+  
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 1rem;
   column-gap: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 699px) {
+  .mainContainer{
+    height: 35rem;
+  }
+  .cardContainer {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .headerContainer h1{
+    font-size: 0.9rem;
+  }
+}
+/* Media Queries */
+@media (max-width: 499px) {
+  .mainContainer{
+    height: 50rem;
+  }
+  .cardContainer {
+ 
+    grid-template-columns: repeat(1,1fr);
+  
+  }
 }
