@@ -2,9 +2,10 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from '@firebase/firestore';
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyC2D0X_Fd79rLk6KErLeHKMk4TnQpjslDo",
-  authDomain: "abacus-f82c6.firebaseapp.com",
+  apiKey: process.env.NODE_ENV,
+  authDomain: process.env.NODE_ENV,
   projectId: "abacus-f82c6",
   storageBucket: "abacus-f82c6.appspot.com",
   messagingSenderId: "747398820427",

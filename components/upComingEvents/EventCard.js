@@ -1,14 +1,27 @@
+'use client';
+import React, { useState } from 'react';
 import styles from '../../styles/upComingEvents/EventCard.module.css';
 import Link from 'next/link';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import Modal from '../Modal';
 
 
 const EventCard = ( { event }) => {
+
+  const [modalShown, toggleModal] = useState(false);
+
   // Konverterar datum till rätt format
   const date = event.date.toDate().toDateString()
             {console.log(date)}
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer}  onClick={toggleModal}>
+      <Modal
+      event={event}
+        shown={modalShown}
+        close={() => {
+          toggleModal(false);
+        }}
+      ></Modal>
     {/* Datum Container*/}
         <div className={styles.dateContainer}>
         {/* Månad och Dag*/}
@@ -32,7 +45,8 @@ const EventCard = ( { event }) => {
           </div>
           {/* Läs mer */}
           <div className={styles.readMoreContainer}>
-            <Link href={"/"}>Läs mer</Link> 
+            {/* <Link href={"/"}>Läs mer</Link>  */}
+            <button>Läs mer</button>
             <FaLongArrowAltRight className={styles.arrow}/>
           </div> 
         </div>

@@ -1,0 +1,10 @@
+.theme-alt {
+  color: #0d214b;
+  background-color: dodgerblue;
+}
+
+
+.theme {
+  color: dodgerblue;
+  background-color: #0d214b;
+}
