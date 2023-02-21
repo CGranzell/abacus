@@ -80,27 +80,38 @@ align-items: center;
 
 /* Media Queries */
 @media (max-width: 800px) {
-  .monthDateContainer{
-    font-size: 0.7rem;
-    font-weight: 700;
-  }
-  .yearContainer{
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
   .titleContainer {
-    font-size: 0.9rem;
+    min-height: 2rem;
   }
-
+  
+  .dateContainer{
+    min-height: 1.5rem;
+  }
+  .textContainer {
+   
+    min-height: 8rem;
+  }
   .pContainer {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+  
   }
 }
 
 @media (max-width: 499px) {
-  .mainContainer{
+  .titleContainer {
+    font-size: 0.9rem;
+  }
+  
+  .dateContainer{
+    font-size: 0.7rem;
+  }
+  
+  .pContainer {
+    font-size: 0.4rem;
+  
+  }
 
-    height: 6rem;
+  .linkContainer {
+    font-size: 0.6rem;
   }
 }

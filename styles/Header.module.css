@@ -1,7 +1,7 @@
 .mainContainer {
   height: 5rem;
   width: 100%;
-  background-color: #f3f3ec;
+  background-color: #ffff;
   border-bottom: 3px solid black;
   display: flex;
 }
