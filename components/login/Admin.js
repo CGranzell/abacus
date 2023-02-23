@@ -4,8 +4,9 @@ import { auth } from '@/firebase';
 import { signOut } from 'firebase/auth';
 import styles from '../../styles/login/Admin.module.css';
 import { db } from '@/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
+import EditEventModal from './EditEventModal';
 
 const Admin = ({ setIsLoggedIn, user }) => {
   // Alla Events
@@ -31,20 +32,38 @@ const Admin = ({ setIsLoggedIn, user }) => {
     setIsLoggedIn(false);
   };
 
-  // Modal
-  const [modalShown, toggleModal] = useState(false);
+  // Radera Event
+  const deleteEvent = async (id) => {
+    const eventDoc = doc(db, 'events', id);
+    await deleteDoc(eventDoc);
+  };
+
+  // Modal För Att skapa Event
+  const [createModalShown, toggleCreateModalShown] = useState(false);
+  // Modal För Att Uppdatera Event
+  const [editModalShown, toggleEditModalShown] = useState(false);
 
   return (
     <>
+      {events.map((event) => {
+        return (
+          <EditEventModal
+            key={event.id}
+            event={event}
+            shown={editModalShown}
+            close={() => {
+              toggleEditModalShown(false);
+            }}
+          />
+        );
+      })}
       <CreateEventModal
         eventsCollectionRef={eventsCollectionRef}
-        // date={date}
-        shown={modalShown}
+        shown={createModalShown}
         close={() => {
-          toggleModal(false);
+          toggleCreateModalShown(false);
         }}
       />
-
       <div className={styles.mainContainer}>
         {/* user name och logout */}
         <div className={styles.userCredContainer}>
@@ -53,7 +72,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
         </div>
 
         <div className={styles.addEventBtnContainer}>
-          <button onClick={toggleModal}>Lägg till event +</button>
+          <button onClick={toggleCreateModalShown}>Lägg till event +</button>
         </div>
         <div className={styles.h2Container}>
           <h2>Events</h2>
@@ -73,20 +92,27 @@ const Admin = ({ setIsLoggedIn, user }) => {
             </thead>
             {events.map((event) => {
               return (
-                <>
-                  <tbody key={event.id}>
-                    <tr>
-                      <td>{event.title}</td>
-                      <td>{event.text}</td>
-                      <td>
-                        <p>{event.date}</p>
-                      </td>
-                      <td>{event.link}</td>
-                      <td>Ändra</td>
-                      <td>Ta bort</td>
-                    </tr>
-                  </tbody>
-                </>
+                <tbody key={event.id}>
+                  <tr>
+                    <td>{event.title}</td>
+                    <td>{event.text}</td>
+                    <td>
+                      <p>{event.date}</p>
+                    </td>
+                    <td>{event.link}</td>
+                    <td>
+                      <button onClick={toggleEditModalShown}>Ändra</button>
+                    </td>
+                    <td>
+                    <form onSubmit={() => {
+                      deleteEvent(event.id)
+                    }}>
+                      <button type='submit'>Radera</button>
+                    </form>
+                      
+                    </td>
+                  </tr>
+                </tbody>
               );
             })}
           </table>
