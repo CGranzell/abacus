@@ -13,6 +13,8 @@ const nextConfig = {
     MEASUREMENT_ID: "G-2S5FFW8RT9",
    
   },
+
+ 
 }
 
 

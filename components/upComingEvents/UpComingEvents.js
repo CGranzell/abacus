@@ -5,6 +5,7 @@ import EventCard from './EventCard';
 import { db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore'
 
+
 const UpComingEvents = () => {
   // Alla Events
   const [events, setEvents] = useState([]);

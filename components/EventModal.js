@@ -3,7 +3,7 @@ import styles from '../styles/EventModal.module.css';
 import Link from 'next/link';
 import { FaWindowClose } from 'react-icons/fa'
 
-const Modal = ({ children, shown, close, event, date }) => {
+const EventModal = ({ children, shown, close, event, date }) => {
   return shown ? (
     <div
       className={styles.modalBackdrop}
@@ -33,12 +33,14 @@ const Modal = ({ children, shown, close, event, date }) => {
         <div className={styles.dateContainer}>
           {/* Månad och Dag*/}
           <div className={styles.monthDateContainer}>
-            <p>{date.substring(4, date.length - 4)}</p>
+            {/* <p>{date.substring(4, date.length - 4)}</p> */}
+            <p>{event.date}</p>
           </div>
 
           {/* År */}
           <div className={styles.yearContainer}>
-            <p>{date.slice(10)}</p>
+            {/* <p>{date.slice(10)}</p> */}
+            <p>{event.date.slice(10)}</p>
           </div>
         </div>
         <div className={styles.textContainer}>
@@ -58,4 +60,4 @@ const Modal = ({ children, shown, close, event, date }) => {
   ) : null;
 };
 
-export default Modal;
+export default EventModal;

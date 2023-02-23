@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from '../../styles/upComingEvents/EventCard.module.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import Modal from '../EventModal';
+import EventModal from '../EventModal';
 
 
 const EventCard = ( { event }) => {
@@ -10,13 +10,13 @@ const EventCard = ( { event }) => {
   const [modalShown, toggleModal] = useState(false);
 
   // Konverterar datum till rätt format
-  const date = event.date.toDate().toDateString()
+  // const date = event.date.toDate().toDateString()
            
   return (
   <>
-      <Modal
+      <EventModal
       event={event}
-      date={date}
+      // date={date}
         shown={modalShown}
         close={() => {
           toggleModal(false);
@@ -27,11 +27,13 @@ const EventCard = ( { event }) => {
         <div className={styles.dateContainer} >
         {/* Månad och Dag*/}
            <div className={styles.monthDateContainer}>
-            <p>{date.substring(4, date.length-4)}</p>
+            {/* <p>{date.substring(4, date.length-4)}</p> */}
+            <p>{event.date}</p>
            </div>
            {/* År */}
           <div className={styles.yearContainer} >
-            <p>{date.slice(10)}</p>
+            {/* <p>{event.date.slice(10)}</p> */}
+            <p>{event.date}</p>
           </div> 
         </div>
         {/* Text Container*/}

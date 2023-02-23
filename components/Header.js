@@ -56,7 +56,7 @@ const Header = () => {
       </div>
       {/* Logga in */}
       <div className={styles.loginContainer}>
-        <Link href={'/login'}>
+        <Link href={'/login-page'}>
           <BsPersonCircle className={styles.icon} />
         </Link>
       </div>

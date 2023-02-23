@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "cookies-next": "^2.1.1",
     "dotenv": "^16.0.3",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "firebase": "^9.17.1",
     "framer-motion": "^9.0.5",
     "next": "13.1.6",
+    "next-cookies": "^2.0.3",
     "react": "18.2.0",
+    "react-cookie": "^4.1.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1"
   }
