@@ -5,20 +5,20 @@ import { FaWindowClose } from 'react-icons/fa';
 import { addDoc } from 'firebase/firestore';
 
 const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
-
   // Skapa event
-  const [newTitle, setNewTitle] = useState("");
-  const [newText, setNewText] = useState("");
+  const [newTitle, setNewTitle] = useState('');
+  const [newText, setNewText] = useState('');
   const [newDate, setNewDate] = useState(null);
-  const [newLink, setNewLink] = useState("");
- 
-  const createEvent = async () => {
-   await addDoc(eventsCollectionRef, {title: newTitle, text: newText, date: newDate, link: newLink})
-   }
+  const [newLink, setNewLink] = useState('');
 
-   const onSubmit = (e) => {
-    // e.preventDefault()
-   }
+  const createEvent = async () => {
+    await addDoc(eventsCollectionRef, {
+      title: newTitle,
+      text: newText,
+      date: newDate,
+      link: newLink,
+    });
+  };
 
   return shown ? (
     <div
@@ -37,39 +37,51 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
       >
         <FaWindowClose className={styles.closeBtn} onClick={close} />
 
-        <div>
-          <form onSubmit={onSubmit}>
+        
+        <form className={styles.mainContainer}>
+          <div className={styles.titleContainer}>
+            <p>Titel :</p>
             <input
               type="text"
-              placeholder="Titel"
               onChange={(e) => {
                 setNewTitle(e.target.value);
               }}
             />
-            <input
+          </div>
+          <div className={styles.textContainer}>
+            <p>Text:</p>
+            <textarea
               type="text"
-              placeholder="Text"
               onChange={(e) => {
                 setNewText(e.target.value);
               }}
             />
+           
+          </div>
+          <div className={styles.dateContainer}>
+            <p>Datum:</p>
             <input
               type="date"
-              placeholder="Datum"
               onChange={(e) => {
                 setNewDate(e.target.value);
               }}
             />
+          </div>
+          <div className={styles.linkContainer}>
+            <p>Länk:</p>
             <input
               type="link"
-              placeholder="Länk"
               onChange={(e) => {
                 setNewLink(e.target.value);
               }}
             />
-            <button onClick={createEvent}>Skapa Event</button>
-          </form>
-        </div>
+          </div>
+          <div className={styles.createBtnContainer}>
+
+          <button onClick={createEvent}>Skapa Event</button>
+          </div>
+        </form>
+       
       </div>
 
       {children}

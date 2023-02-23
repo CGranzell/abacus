@@ -1,5 +1,6 @@
 .mainContainer {
-  height: 100%;
+  /* height: 100%; */
+  min-height: 100vh;
   width: 100%;
   /* border: 1px solid black; */
   display: flex;
@@ -48,7 +49,72 @@
 }
 
 .tableContainer {
-  height: auto;
+  min-height: 40rem;
   width: 90%;
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 5rem;
+  
 }
+/* Tabell */
+.table {
+  width: 100%;
+}
+
+/* Tabell head */
+
+
+.thTitle{
+  width: 20%;
+}
+
+.thText{
+  width: 30%;
+}
+
+.thDate{
+  width: 15%;
+}
+
+.thLink{
+  width: 15%;
+}
+
+.thEdit{
+  width: 20%;
+}
+
+
+/* Tabell body */
+
+.tBody{
+  height: 4rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+
+.wrapperBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconEdit{
+  font-size: 1.5rem;
+ transition: 0.3 ease-in-out;
+}
+.iconEdit:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.iconDelete{
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  transition: 0.3 ease-in-out;
+}
+.iconDelete:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+

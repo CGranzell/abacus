@@ -7,10 +7,14 @@ import { db } from '@/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
 import EditEventModal from './EditEventModal';
+import { MdEdit, MdDelete } from 'react-icons/md'
 
 const Admin = ({ setIsLoggedIn, user }) => {
   // Alla Events
   const [events, setEvents] = useState([]);
+  
+
+  //  const { id, title, date, text, link } = events;
 
   // Referens till databasen
   const eventsCollectionRef = collection(db, 'events');
@@ -45,6 +49,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
 
   return (
     <>
+   
       {events.map((event) => {
         return (
           <EditEventModal
@@ -57,6 +62,15 @@ const Admin = ({ setIsLoggedIn, user }) => {
           />
         );
       })}
+      {/* <EditEventModal
+            key={event.id}
+            event={event}
+            shown={editModalShown}
+            close={() => {
+              toggleEditModalShown(false);
+            }}
+          /> */}
+        
       <CreateEventModal
         eventsCollectionRef={eventsCollectionRef}
         shown={createModalShown}
@@ -79,38 +93,42 @@ const Admin = ({ setIsLoggedIn, user }) => {
         </div>
         {/* tabell med event data */}
         <div className={styles.tableContainer}>
-          <table>
-            <thead>
+          <table className={styles.table}>
+            <thead className={styles.thead}>
               <tr>
-                <th>Titel</th>
-                <th>Text</th>
-                <th>Datum</th>
-                <th>Länk</th>
-                <th>Ändra</th>
-                <th>Ta bort</th>
+                <th className={styles.thTitle}>Titel</th>
+                <th className={styles.thText}>Text</th>
+                <th className={styles.thDate}>Datum</th>
+                <th className={styles.thLink}>Länk</th>
+                <th className={styles.thEdit}>Redigera</th>
+                {/* <th>Ta bort</th> */}
               </tr>
             </thead>
             {events.map((event) => {
               return (
-                <tbody key={event.id}>
-                  <tr>
-                    <td>{event.title}</td>
-                    <td>{event.text}</td>
+                <tbody key={event.id} className={styles.tBody}>
+                  <tr >
+                    <td className={styles.tdTitle}>{event.title.substring(0,20)}</td>
+                    <td>{event.text.substring(0,30)}...</td>
                     <td>
                       <p>{event.date}</p>
                     </td>
-                    <td>{event.link}</td>
-                    <td>
-                      <button onClick={toggleEditModalShown}>Ändra</button>
-                    </td>
-                    <td>
-                    <form onSubmit={() => {
-                      deleteEvent(event.id)
-                    }}>
-                      <button type='submit'>Radera</button>
+                    <td>{event.link.substring(0,20)}</td>
+                    <td className={styles.tdBtns}>
+                    <div className={styles.wrapperBtns}>
+
+                    
+
+                      <MdEdit onClick={toggleEditModalShown} className={styles.iconEdit}/>
+                      <form onSubmit={() => {
+                      deleteEvent(event.id) 
+                    }} >
+                   
+                      <button type='submit' className={styles.iconDelete}><MdDelete /></button>
                     </form>
-                      
+                    </div>
                     </td>
+                    
                   </tr>
                 </tbody>
               );
