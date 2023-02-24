@@ -5,7 +5,7 @@ const MENU_LIST = [
   { text: 'Om Oss', href: '/' },
   { text: 'Kontakt', href: '/' },
   { text: 'Schema', href: '/' },
-  { text: 'Logga in', href: '/' },
+  { text: 'Logga in', href: '/login-page' },
 ];
 
 
