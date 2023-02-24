@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 const MENU_LIST = [
-  { text: 'Nyheter', href: '/' },
+  // { text: 'Nyheter', href: '/' },
   { text: 'Om Oss', href: '/' },
   { text: 'Kontakt', href: '/' },
-  { text: 'Schema', href: '/' },
+  // { text: 'Schema', href: '/' },
 ];
 
 const NavItem = () => {
