@@ -4,15 +4,19 @@ import { auth } from '@/firebase';
 import { signOut } from 'firebase/auth';
 import styles from '../../styles/login/Admin.module.css';
 import { db } from '@/firebase';
-import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
 import { MdAddBox } from 'react-icons/md';
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 import EventTableRow from './EventTableRow';
 
 const Admin = ({ setIsLoggedIn, user }) => {
   // Alla Events
   const [events, setEvents] = useState([]);
+
+    // Spinner
+    const [isLoading, setIsLoading] = useState(false);
 
   // Referens till databasen
   const eventsCollectionRef = collection(db, 'events');
@@ -30,8 +34,10 @@ const Admin = ({ setIsLoggedIn, user }) => {
 
   // Loggar ut
   const logOut = async () => {
+    setIsLoading(true);
     await signOut(auth);
     setIsLoggedIn(false);
+    setIsLoading(false);
   };
 
  
@@ -41,6 +47,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
 
   return (
     <>
+
       <CreateEventModal
         eventsCollectionRef={eventsCollectionRef}
         shown={createModalShown}
@@ -48,6 +55,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
           toggleCreateModalShown(false);
         }}
       />
+      
       <div className={styles.mainContainer}>
         {/* user name och logout */}
         <div className={styles.userCredContainer}>
@@ -84,7 +92,9 @@ const Admin = ({ setIsLoggedIn, user }) => {
           </table>
         </div>
       </div>
+    
     </>
+    
   );
 };
 

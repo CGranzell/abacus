@@ -1,6 +1,11 @@
 import styles from '../../styles/welcomeSection/WelcomeTextCard.module.css';
 
-const WelcomeTextCard = () => {
+const WelcomeTextCard = ({ eventsRef }) => {
+
+  // const handleClick = () => {
+  //   eventsRef.current.scrollIntoView({ behavior: 'smooth' })
+  // }
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.headerContainer}>
@@ -21,6 +26,9 @@ const WelcomeTextCard = () => {
           utmaning riskerar att bli s.k. hemmasittare eller att drabbas av
           psykisk ohälsa.
         </p>
+      {/* <div className={styles.ctaContainer}>
+      <button onClick={handleClick}>Se våra events</button>
+      </div> */}
       </div>
       </div>
     </div>

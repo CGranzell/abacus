@@ -13,6 +13,8 @@ const page = () => {
   const [user, setUser] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  
+
 // Hanterar inloggat tillstånd
 const monitorAuthState = async () => {
   onAuthStateChanged(auth, (user) => {

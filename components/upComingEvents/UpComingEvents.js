@@ -1,14 +1,16 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from '../../styles/upComingEvents/UpComingEvents.module.css';
 import EventCard from './EventCard';
 import { db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore'
 
 
-const UpComingEvents = () => {
+const UpComingEvents = ( ) => {
   // Alla Events
   const [events, setEvents] = useState([]);
+
+  // const eventsRef = useRef();
 
   // Referens till databasen 
   const eventsCollectionRef = collection(db, "events");
@@ -31,7 +33,7 @@ const UpComingEvents = () => {
         <h1>Kommande Events</h1>
       
       </div>
-      <div className={styles.cardContainer}>
+      <div  className={styles.cardContainer}>
      
         {events.slice(0, 6).map((event) => {
           

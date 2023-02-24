@@ -4,10 +4,14 @@ import { MdEdit, MdDelete } from 'react-icons/md';
 import EditEventModal from './EditEventModal';
 import {  doc, deleteDoc } from 'firebase/firestore';
 import { db } from '@/firebase';
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 const EventTableRow = ({ event }) => {
   // Modal För Att Uppdatera Event
   const [editModalShown, toggleEditModalShown] = useState(false);
+
+   // Spinner
+   const [isLoading, setIsLoading] = useState(false);
 
   // Radera Event
   const deleteEvent = async (id) => {

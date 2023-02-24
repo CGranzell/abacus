@@ -27,13 +27,13 @@ const EventCard = ( { event }) => {
         <div className={styles.dateContainer} >
         {/* Månad och Dag*/}
            <div className={styles.monthDateContainer}>
-            {/* <p>{date.substring(4, date.length-4)}</p> */}
-            <p>{event.date}</p>
+            <p>{event.date.substring(5, 10)}</p>
+            {/* <p>{event.date}</p> */}
            </div>
            {/* År */}
           <div className={styles.yearContainer} >
-            {/* <p>{event.date.slice(10)}</p> */}
-            <p>{event.date}</p>
+          <p>{event.date.substring(0, 4)}</p>
+            
           </div> 
         </div>
         {/* Text Container*/}

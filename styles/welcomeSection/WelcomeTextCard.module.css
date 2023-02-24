@@ -31,13 +31,18 @@
 
 .textWrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 90%;
   width: 90%;
   /* border: 1px solid black; */
   font-size: 0.6rem;
   line-height: 1.2rem;
+}
+
+.ctaContainer {
+  /* border: 1px solid black; */
 }
 
 /* Media Queries */
