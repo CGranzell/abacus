@@ -6,15 +6,12 @@ import styles from '../../styles/login/Admin.module.css';
 import { db } from '@/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
-import EditEventModal from './EditEventModal';
-import { MdEdit, MdDelete } from 'react-icons/md'
+
+import EventTableRow from './EventTableRow';
 
 const Admin = ({ setIsLoggedIn, user }) => {
   // Alla Events
   const [events, setEvents] = useState([]);
-  
-
-  //  const { id, title, date, text, link } = events;
 
   // Referens till databasen
   const eventsCollectionRef = collection(db, 'events');
@@ -36,41 +33,13 @@ const Admin = ({ setIsLoggedIn, user }) => {
     setIsLoggedIn(false);
   };
 
-  // Radera Event
-  const deleteEvent = async (id) => {
-    const eventDoc = doc(db, 'events', id);
-    await deleteDoc(eventDoc);
-  };
+ 
 
   // Modal För Att skapa Event
   const [createModalShown, toggleCreateModalShown] = useState(false);
-  // Modal För Att Uppdatera Event
-  const [editModalShown, toggleEditModalShown] = useState(false);
 
   return (
     <>
-   
-      {events.map((event) => {
-        return (
-          <EditEventModal
-            key={event.id}
-            event={event}
-            shown={editModalShown}
-            close={() => {
-              toggleEditModalShown(false);
-            }}
-          />
-        );
-      })}
-      {/* <EditEventModal
-            key={event.id}
-            event={event}
-            shown={editModalShown}
-            close={() => {
-              toggleEditModalShown(false);
-            }}
-          /> */}
-        
       <CreateEventModal
         eventsCollectionRef={eventsCollectionRef}
         shown={createModalShown}
@@ -107,29 +76,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
             {events.map((event) => {
               return (
                 <tbody key={event.id} className={styles.tBody}>
-                  <tr >
-                    <td className={styles.tdTitle}>{event.title.substring(0,20)}</td>
-                    <td>{event.text.substring(0,30)}...</td>
-                    <td>
-                      <p>{event.date}</p>
-                    </td>
-                    <td>{event.link.substring(0,20)}</td>
-                    <td className={styles.tdBtns}>
-                    <div className={styles.wrapperBtns}>
-
-                    
-
-                      <MdEdit onClick={toggleEditModalShown} className={styles.iconEdit}/>
-                      <form onSubmit={() => {
-                      deleteEvent(event.id) 
-                    }} >
-                   
-                      <button type='submit' className={styles.iconDelete}><MdDelete /></button>
-                    </form>
-                    </div>
-                    </td>
-                    
-                  </tr>
+                  <EventTableRow event={event} />
                 </tbody>
               );
             })}

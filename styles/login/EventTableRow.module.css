@@ -1,0 +1,25 @@
+
+.wrapperBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconEdit{
+  font-size: 1.5rem;
+ transition: 0.3 ease-in-out;
+}
+.iconEdit:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.iconDelete{
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  transition: 0.3 ease-in-out;
+}
+.iconDelete:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
