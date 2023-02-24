@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const MENU_LIST = [
-  // { text: 'Nyheter', href: '/' },
+  { text: 'Hem', href: '/' },
   { text: 'Om Oss', href: '/about-us' },
   { text: 'Kontakt', href: '/contact' },
   // { text: 'Schema', href: '/' },
