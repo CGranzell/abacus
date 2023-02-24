@@ -6,6 +6,7 @@ import styles from '../../styles/login/Admin.module.css';
 import { db } from '@/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
+import { MdAddBox } from 'react-icons/md';
 
 import EventTableRow from './EventTableRow';
 
@@ -55,7 +56,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
         </div>
 
         <div className={styles.addEventBtnContainer}>
-          <button onClick={toggleCreateModalShown}>Lägg till event +</button>
+          <button onClick={toggleCreateModalShown}>Lägg till event <MdAddBox className={styles.addIcon}/></button>
         </div>
         <div className={styles.h2Container}>
           <h2>Events</h2>

@@ -16,11 +16,17 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.userCredContainer p{
+  font-size: 1rem;
+ }
 .userCredContainer button{
   height: 2rem;
   width: 6rem;
   border-radius: 2px;
   cursor: pointer;
+  background-color: white;
+  border: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
 .addEventBtnContainer{
@@ -36,7 +42,15 @@
   width: 40%;
   /* border: 1px solid black; */
   border-radius: 6px;
- cursor: pointer;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  font-size: 1.5rem;
+}
+
+.addIcon {
+  font-size: 2rem;
 }
 
 .h2Container{
@@ -118,3 +132,19 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 699px) {
+  .userCredContainer p{
+   font-size: 0.7rem;
+  }
+
+  .addEventBtnContainer button{
+    height: 3rem;
+    
+    
+    font-size: 1rem;
+  }
+  
+  .addIcon {
+    font-size: 1rem;
+  }
+}

@@ -26,7 +26,7 @@ const EventTableRow = ({ event }) => {
         }}
       />
 
-      <tr>
+      <tr className={styles.tr}>
         <td className={styles.tdTitle}>{event.title.substring(0, 20)}</td>
         <td>{event.text.substring(0, 30)}...</td>
         <td>
@@ -41,7 +41,7 @@ const EventTableRow = ({ event }) => {
             />
             <form
               onSubmit={(e) => {
-                e.preventDefault();
+               
                 deleteEvent(event.id);
               }}
             >
