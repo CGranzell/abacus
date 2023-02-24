@@ -153,8 +153,8 @@ transition: 0.3s ease-in-out;
   right: 0;
   height: 70vh;
   width: 70%;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   opacity: 0;
   animation: showMe 0.5s forwards;
   
@@ -165,7 +165,7 @@ transition: 0.3s ease-in-out;
   align-items: center;
 }
 .burgerMenu a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   margin: 5px 15px;
 }
