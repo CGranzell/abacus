@@ -8,6 +8,7 @@
 
 /* logo */
 .logoContainer {
+  margin-left: 50px;
   height: 100%;
   width: 20%;
   display: flex;
@@ -16,15 +17,15 @@
 
 .logoWrapper {
   height: 100%;
-  width: 50%;
+  width: 100%;
   position: relative;
-  
+
 }
 
 .logo{
 height: 100%;
 width: 100%;
-object-fit: contain;
+object-fit: cover;
 transition: 0.3s ease-in-out;
 }
 
@@ -189,6 +190,14 @@ transition: 0.3s ease-in-out;
 
 /* Media Queries */
 @media (max-width: 699px) {
+/* logo */
+.logoContainer {
+  
+  width: 40%;
+  
+}
+
+  
   .pageLinksContainer,
   .loginContainer {
     display: none;
