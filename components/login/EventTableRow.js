@@ -14,7 +14,8 @@ const EventTableRow = ({ event }) => {
    const [isLoading, setIsLoading] = useState(false);
 
   // Radera Event
-  const deleteEvent = async (id) => {
+  const deleteEvent = async (e,id) => {
+    e.preventDefault();
     const eventDoc = doc(db, 'events', id);
     await deleteDoc(eventDoc);
   };
