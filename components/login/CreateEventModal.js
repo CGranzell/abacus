@@ -13,6 +13,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
 
   const createEvent = async (e) => {
     e.preventDefault();
+    close();
     try {
 
       await addDoc(eventsCollectionRef, {
