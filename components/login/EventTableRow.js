@@ -47,6 +47,7 @@ const EventTableRow = ({ event }) => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
+                window.location.reload();
                 deleteEvent(event.id);
               }}
             >
