@@ -13,7 +13,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
 
   const createEvent = async (e) => {
     e.preventDefault();
-    close();
+    // close();
     // window.location.reload();
     try {
 
@@ -23,6 +23,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
         date: newDate,
         link: newLink,
       });
+      window.location.reload();
     } catch(error) {
       console.log(error)
     }
