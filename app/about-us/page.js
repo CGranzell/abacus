@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import math from '../../public/images/math.jpg';
+import omOssTop from '../../public/images/lecture.jpg';
+import omOssBottom from '../../public/images//om-oss-bottom.jpg';
 
 const page = () => {
   return (
@@ -11,41 +13,66 @@ const page = () => {
         <Image src={math} alt="" sizes="true" className={styles.mathImg} />
       </div>
       <div className={styles.textContainer}>
-        <div className={styles.textWrapper}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis
-            scelerisque fermentum dui faucibus in ornare quam viverra. Nisi
-            vitae suscipit tellus mauris a diam. Pellentesque pulvinar
-            pellentesque habitant morbi. Nulla malesuada pellentesque elit eget
-            gravida cum sociis natoque. Enim neque volutpat ac tincidunt vitae
-            semper quis lectus. Venenatis a condimentum vitae sapien
-            pellentesque habitant. Ultricies mi quis hendrerit dolor magna.
-            Tristique sollicitudin nibh sit amet commodo nulla. Lectus magna
-            fringilla urna porttitor. Elementum facilisis leo vel fringilla. Mi
-            proin sed libero enim sed faucibus. Aliquam ultrices sagittis orci
-            a. Id faucibus nisl tincidunt eget. Adipiscing bibendum est
-            ultricies integer quis auctor elit sed. Fermentum posuere urna nec
-            tincidunt praesent. Scelerisque purus semper eget duis at tellus.
-            Nec ullamcorper sit amet risus nullam eget felis. Gravida neque
-            convallis a cras semper. Fusce ut placerat orci nulla pellentesque.
-            Risus quis varius quam quisque id diam vel quam. Orci a scelerisque
-            purus semper eget duis. Adipiscing elit ut aliquam purus. Mattis
-            vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor.
-            Rhoncus dolor purus non enim praesent elementum facilisis. Donec
-            enim diam vulputate ut pharetra sit amet aliquam id. Nulla
-            pellentesque dignissim enim sit amet venenatis. Nec dui nunc mattis
-            enim ut tellus elementum sagittis vitae. Erat nam at lectus urna
-            duis. Eu feugiat pretium nibh ipsum. Commodo odio aenean sed
-            adipiscing diam donec adipiscing tristique risus. At erat
-            pellentesque adipiscing commodo elit at imperdiet dui accumsan.
-            Dictum varius duis at consectetur lorem donec massa. Consequat nisl
-            vel pretium lectus quam id. Lectus nulla at volutpat diam ut
-            venenatis tellus. 
-          </p>
+        {/* top container */}
+        <div className={styles.topContainer}>
+          <div className={styles.topLeftContainer}>
+            <div className={styles.topImgContainer}>
+              <Image
+                src={omOssTop}
+                alt=""
+                sizes="true"
+                className={styles.aboutTopImg}
+              />
+            </div>
+          </div>
+          <div className={styles.topRightContainer}>
+            <div className={styles.topRightTextContainer}>
+              <h3>PROJEKTGRUPPEN</h3>
+              <p>
+                Projektgruppen som har utvecklat ABACUSCAMP är: Christer
+                Norström, professor och ordförande stiftelsen Fryx, ordförande
+                ABB Gymnasiet, Petra Nygård, rektor Mälardalen International
+                School, Peter Kallioniemi, matematiklärare Fryxellska skolan,
+                Lisa Engström, AIoch programmeringsexpert ABB Gymnasiet, Emmy
+                Henriksson, lärarassistent ABB Gymnasiet, Ahmad Alali,
+                Civilingenjörstudent MDU och lärarassistent Mälardalen
+                International School, Laith Ali Basha, Civilingenjörstudent KTH,
+                Joakim Flink AI-lärare ABB Gymnasiet, Tina Degerstedt, förälder
+                och Andreas Wiik, VD/skolchef/rektor Fryxellska skolan.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* bottom container */}
+        <div className={styles.bottomContainer}>
+          <div className={styles.bottomLeftContainer}>
+            <div className={styles.bottomLeftTextContainer}>
+              <h3>BAKGRUND</h3>
+              <p>
+                För speciellt intresserade och särskilt begåvade elever inom
+                matematik, teknik och naturvetenskap finns idag alltför få
+                utmaningar. Elever med särskild begåvning behöver bli
+                stimulerade och få möta likasinnade elever för att inte tappa
+                motivationen eller hamna i utanförskap. Forskning visar att
+                många talangfulla elever underpresterar för att passa in i den
+                svenska skolan (Sims 2021). Vi vill bemöta behoven hos dessa
+                elever som i brist på motivation och utmaning riskerar att bli
+                s.k. hemmasittare eller att drabbas av psykisk ohälsa.
+              </p>
+            </div>
+          </div>
+          <div className={styles.bottomRightContainer}>
+            <div className={styles.bottomImgContainer}>
+              <Image
+                src={omOssBottom}
+                alt=""
+                sizes="true"
+                className={styles.aboutBottomImg}
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className={styles.cardContainer}></div>
     </div>
   );
 };
