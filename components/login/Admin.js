@@ -79,7 +79,6 @@ const Admin = ({ setIsLoggedIn, user }) => {
                 <th className={styles.thDate}>Datum</th>
                 <th className={styles.thLink}>Länk</th>
                 <th className={styles.thEdit}>Redigera</th>
-                {/* <th>Ta bort</th> */}
               </tr>
             </thead>
             {events.map((event) => {

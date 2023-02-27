@@ -74,10 +74,13 @@
   justify-content: center;
 }
 .createBtnContainer button {
-height: 2rem;
-width: 6rem;
-border-radius: 4px;
-cursor: pointer;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
 /* Media Queries */

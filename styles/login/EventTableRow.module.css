@@ -1,3 +1,7 @@
+.tr td {
+  text-align: center;
+}
+
 
 .wrapperBtns {
   display: flex;
