@@ -11,8 +11,8 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
   const [newDate, setNewDate] = useState(null);
   const [newLink, setNewLink] = useState('');
 
-  const createEvent = async () => {
-
+  const createEvent = async (e) => {
+    e.preventDefaul();
     try {
 
       await addDoc(eventsCollectionRef, {
