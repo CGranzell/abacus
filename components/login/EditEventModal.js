@@ -51,7 +51,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
         
           <form className={styles.mainContainer}
             onSubmit={(e) => {
-             
+             e.preventDefault();
               updateEvent(event.id, event.title, event.text, event.date, event.link);
             }}
           >
