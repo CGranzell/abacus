@@ -12,12 +12,20 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
   const [newLink, setNewLink] = useState('');
 
   const createEvent = async () => {
-    await addDoc(eventsCollectionRef, {
-      title: newTitle,
-      text: newText,
-      date: newDate,
-      link: newLink,
-    });
+
+    try {
+
+      await addDoc(eventsCollectionRef, {
+        title: newTitle,
+        text: newText,
+        date: newDate,
+        link: newLink,
+      });
+    } catch(error) {
+      console.log(error)
+    }
+
+
   };
 
   return shown ? (

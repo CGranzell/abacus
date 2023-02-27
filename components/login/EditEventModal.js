@@ -21,7 +21,14 @@ const EditEventModal = ({ children, shown, close, event }) => {
       date: newDate,
       link: newLink
     };
-    await updateDoc(eventDoc, newFields);
+
+    try {
+
+      await updateDoc(eventDoc, newFields);
+    } catch(error) {
+          console.log(error);
+    }
+
   };
 
   return shown ? (
