@@ -15,8 +15,8 @@ const EventTableRow = ({ event }) => {
 
   // Radera Event
   const deleteEvent = async (e,id) => {
-    e.preventDefault();
     const eventDoc = doc(db, 'events', id);
+    e.preventDefault();
     await deleteDoc(eventDoc);
   };
 
