@@ -18,6 +18,7 @@ const EventTableRow = ({ event }) => {
     const eventDoc = doc(db, 'events', id);
     
     await deleteDoc(eventDoc);
+     window.location.reload();
   };
 
   return (
