@@ -14,7 +14,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
   const createEvent = async (e) => {
     e.preventDefault();
     close();
-    window.location.reload();
+    // window.location.reload();
     try {
 
       await addDoc(eventsCollectionRef, {
