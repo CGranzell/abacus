@@ -28,13 +28,11 @@ const LoginForm = ({ monitorAuthState }) => {
         loginEmail,
         loginPassword
       );
-
       console.log(userCredential.user);
       setFormIsValid(true);
       
     } catch (error) {
       console.log(error);
-      // setErrorMessage("Fel lösenord. Försök igen");
       showLoginError(error);
     }
   };
@@ -55,7 +53,6 @@ const LoginForm = ({ monitorAuthState }) => {
     e.preventDefault();
     loginEmailPassword();
     monitorAuthState();
-    
   };
 
   return (

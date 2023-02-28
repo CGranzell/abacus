@@ -1,10 +1,7 @@
+import React from 'react';
 import styles from '../../styles/welcomeSection/WelcomeTextCard.module.css';
 
-const WelcomeTextCard = ({ eventsRef }) => {
-
-  // const handleClick = () => {
-  //   eventsRef.current.scrollIntoView({ behavior: 'smooth' })
-  // }
+const WelcomeTextCard = ( { onBackClick }) => {
 
   return (
     <div className={styles.mainContainer}>
@@ -26,9 +23,9 @@ const WelcomeTextCard = ({ eventsRef }) => {
           utmaning riskerar att bli s.k. hemmasittare eller att drabbas av
           psykisk ohälsa.
         </p>
-      {/* <div className={styles.ctaContainer}>
-      <button onClick={handleClick}>Se våra events</button>
-      </div> */}
+      <div className={styles.ctaContainer}>
+      <button onClick={onBackClick}>Se våra events</button>
+      </div>
       </div>
       </div>
     </div>

@@ -10,7 +10,6 @@ const EditEventModal = ({ children, shown, close, event }) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   // Updatera Event
-
   const [newTitle, setNewTitle] = useState(event.title);
   const [newText, setNewText] = useState(event.text);
   const [newDate, setNewDate] = useState(event.date);
@@ -32,7 +31,6 @@ const EditEventModal = ({ children, shown, close, event }) => {
       try {
         await updateDoc(eventDoc, newFields);
         window.location.reload();
-        // console.log(newFields);
       } catch (error) {
         console.log(error);
       }
@@ -55,14 +53,10 @@ const EditEventModal = ({ children, shown, close, event }) => {
         }}
       >
         <FaWindowClose className={styles.closeBtn} onClick={close} />
-
         <form
           className={styles.mainContainer}
           onSubmit={(e) => {
             e.preventDefault();
-              
-
-            // close();
             updateEvent(
               event.id,
               event.title,
@@ -70,7 +64,6 @@ const EditEventModal = ({ children, shown, close, event }) => {
               event.date,
               event.link
             );
-              
           }}
         >
           <div className={styles.titleContainer}>

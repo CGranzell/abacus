@@ -1,16 +1,15 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import styles from '../../styles/upComingEvents/UpComingEvents.module.css';
 import EventCard from './EventCard';
 import { db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore'
 
 
-const UpComingEvents = ( ) => {
+const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
   // Alla Events
   const [events, setEvents] = useState([]);
 
-  // const eventsRef = useRef();
 
   // Referens till databasen 
   const eventsCollectionRef = collection(db, "events");
@@ -28,8 +27,8 @@ const UpComingEvents = ( ) => {
   }, [])
   
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.headerContainer}>
+    <div className={styles.mainContainer} ref={ref}>
+      <div  className={styles.headerContainer}>
         <h1>Kommande Events</h1>
       
       </div>
@@ -47,6 +46,6 @@ const UpComingEvents = ( ) => {
       </div>
     </div>
   )
-}
+});
 
 export default UpComingEvents

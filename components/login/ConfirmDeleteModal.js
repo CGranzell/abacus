@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../../styles/login/ConfirmDeleteModal.module.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { doc, deleteDoc } from 'firebase/firestore';
@@ -39,8 +39,12 @@ const ConfirmDeleteModal = ({ children, shown, close, event }) => {
             }}
           >
             <div className={styles.btnContainer}>
-              <button type="submit" className={styles.confirmBtn}>Radera</button>
-              <button onClick={(e) => close()} className={styles.noBtn}>Avbryt</button>
+              <button type="submit" className={styles.confirmBtn}>
+                Radera
+              </button>
+              <button onClick={(e) => close()} className={styles.noBtn}>
+                Avbryt
+              </button>
             </div>
           </form>
         </div>

@@ -7,8 +7,6 @@ import { db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
 import { MdAddBox } from 'react-icons/md';
-import LoadingSpinner from "../../components/LoadingSpinner";
-
 import EventTableRow from './EventTableRow';
 
 const Admin = ({ setIsLoggedIn, user }) => {
@@ -39,8 +37,6 @@ const Admin = ({ setIsLoggedIn, user }) => {
     setIsLoggedIn(false);
     setIsLoading(false);
   };
-
- 
 
   // Modal För Att skapa Event
   const [createModalShown, toggleCreateModalShown] = useState(false);
@@ -91,9 +87,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
           </table>
         </div>
       </div>
-    
     </>
-    
   );
 };
 

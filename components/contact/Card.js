@@ -6,13 +6,11 @@ import Link from 'next/link';
 const Card = ({ h2, href, img }) => {
   return (
     <Link href={href} className={styles.container}>
-    {/* <div className={styles.container}> */}
         <Image src={img} alt="" sizes='true' className={img} />
       <h2>{h2}</h2> 
       <div className={styles.contactContainer}>
         Besök <FaLongArrowAltRight className={styles.arrow}/>
       </div>
-    {/* </div> */}
     </Link>
   );
 };

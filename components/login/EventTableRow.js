@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from '../../styles/login/EventTableRow.module.css';
 import { MdEdit, MdDelete } from 'react-icons/md';
 import EditEventModal from './EditEventModal';
-
 import ConfirmDeleteModal from './ConfirmDeleteModal';
 
 const EventTableRow = ({ event }) => {
@@ -11,8 +10,6 @@ const EventTableRow = ({ event }) => {
   // Modal för confirm delete
   const [confirmDeleteModalShown, toggleConfirmDeleteModalShown] =
     useState(false);
-
-  
 
   return (
     <>
@@ -45,7 +42,6 @@ const EventTableRow = ({ event }) => {
               onClick={toggleEditModalShown}
               className={styles.iconEdit}
             />
-
             <MdDelete
               onClick={toggleConfirmDeleteModalShown}
               className={styles.iconDelete}
