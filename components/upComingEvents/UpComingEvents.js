@@ -26,6 +26,13 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
       getEvents();
   }, [])
   
+  // Sorterar events efter datum
+ const sortedEvents = events.sort ( function (date1, date2){
+    return date1 - date2
+});
+
+console.log(sortedEvents);
+
   return (
     <div className={styles.mainContainer} ref={ref}>
       <div  className={styles.headerContainer}>
@@ -34,7 +41,7 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
       </div>
       <div  className={styles.cardContainer}>
      
-        {events.slice(0, 6).map((event) => {
+        {sortedEvents.slice(0, 6).map((event) => {
           
           return (
             

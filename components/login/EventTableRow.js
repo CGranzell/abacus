@@ -13,9 +13,7 @@ const EventTableRow = ({ event }) => {
 
   return (
     <>
-      
       <tr className={styles.tr}>
-     
         <td className={styles.tdTitle}>{event.title.substring(0, 20)}</td>
         <td className={styles.tdTitle}>{event.text.substring(0, 30)}...</td>
         <td className={styles.tdTitle}>
@@ -35,23 +33,23 @@ const EventTableRow = ({ event }) => {
           </div>
         </td>
         <td>
-      <EditEventModal
-        // key={key}
-        event={event}
-        shown={editModalShown}
-        close={() => {
-          toggleEditModalShown(false);
-        }}
-      />
-      <ConfirmDeleteModal
-        // key={key}
-        event={event}
-        shown={confirmDeleteModalShown}
-        close={() => {
-          toggleConfirmDeleteModalShown(false);
-        }}
-      />
-      </td>
+          <EditEventModal
+            // key={key}
+            event={event}
+            shown={editModalShown}
+            close={() => {
+              toggleEditModalShown(false);
+            }}
+          />
+          <ConfirmDeleteModal
+            // key={key}
+            event={event}
+            shown={confirmDeleteModalShown}
+            close={() => {
+              toggleConfirmDeleteModalShown(false);
+            }}
+          />
+        </td>
       </tr>
     </>
   );
