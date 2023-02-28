@@ -5,7 +5,6 @@ import WelcomeSection from '@/components/welcomeSection/WelcomeSection';
 import styles from './page.module.css'
 
 
-
 export default function Home() {
 
   // ref till kommande events
