@@ -2,22 +2,17 @@ import React, { useState } from 'react';
 import styles from '../../styles/login/EventTableRow.module.css';
 import { MdEdit, MdDelete } from 'react-icons/md';
 import EditEventModal from './EditEventModal';
-import {  doc, deleteDoc } from 'firebase/firestore';
-import { db } from '@/firebase';
 
+import ConfirmDeleteModal from './ConfirmDeleteModal';
 
 const EventTableRow = ({ event }) => {
   // Modal För Att Uppdatera Event
   const [editModalShown, toggleEditModalShown] = useState(false);
+  // Modal för confirm delete
+  const [confirmDeleteModalShown, toggleConfirmDeleteModalShown] =
+    useState(false);
 
-
-  // Radera Event
-  const deleteEvent = async (id) => {
-    const eventDoc = doc(db, 'events', id);
-    
-    await deleteDoc(eventDoc);
-     window.location.reload();
-  };
+  
 
   return (
     <>
@@ -29,7 +24,14 @@ const EventTableRow = ({ event }) => {
           toggleEditModalShown(false);
         }}
       />
-
+      <ConfirmDeleteModal
+        key={event.id}
+        event={event}
+        shown={confirmDeleteModalShown}
+        close={() => {
+          toggleConfirmDeleteModalShown(false);
+        }}
+      />
       <tr className={styles.tr}>
         <td className={styles.tdTitle}>{event.title.substring(0, 20)}</td>
         <td>{event.text.substring(0, 30)}...</td>
@@ -43,16 +45,11 @@ const EventTableRow = ({ event }) => {
               onClick={toggleEditModalShown}
               className={styles.iconEdit}
             />
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                deleteEvent(event.id);
-              }}
-            >
-              <button type="submit" className={styles.iconDelete}>
-                <MdDelete />
-              </button>
-            </form>
+
+            <MdDelete
+              onClick={toggleConfirmDeleteModalShown}
+              className={styles.iconDelete}
+            />
           </div>
         </td>
       </tr>

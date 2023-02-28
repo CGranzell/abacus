@@ -1,0 +1,103 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modalContent {
+  width: 50%;
+  height: 30%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  
+}
+
+.closeBtn {
+ color: black;
+ background: none;
+ border: none;
+ transition: 0.3 ease-in-out;
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+.confirmContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid black; */
+}
+
+.confirmBtn {
+  height: 2rem;
+  width: 5rem;
+  background-color: rgb(183, 47, 47);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.confirmBtn:hover {
+ cursor: pointer;
+ background-color: rgb(251, 138, 138);
+}
+
+.noBtn {
+  height: 2rem;
+  width: 5rem;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+.noBtn:hover {
+  cursor: pointer;
+  background-color: rgb(205, 205, 205);
+}
+
+@media (max-width: 499px) {
+
+  .modalContent {
+    width: 70%;
+    
+    
+  }
+
+  .confirmContainer p {
+    font-size: 0.7rem;
+  }
+
+  .noBtn {
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1px;
+  }
+
+  .confirmBtn {
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1px;
+  }
+  
+}
