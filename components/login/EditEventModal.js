@@ -6,6 +6,9 @@ import { updateDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
 
 const EditEventModal = ({ children, shown, close, event }) => {
+
+  const [formIsValid, setFormIsValid] = useState(false);
+
   // Updatera Event
 
   const [newTitle, setNewTitle] = useState(event.title);
@@ -14,22 +17,26 @@ const EditEventModal = ({ children, shown, close, event }) => {
   const [newLink, setNewLink] = useState(event.link);
 
   const updateEvent = async (id) => {
-    const eventDoc = doc(db, 'events', id);
-    const newFields = {
-      title: newTitle,
-      text: newText,
-      date: newDate,
-      link: newLink
-    };
+    if (newTitle === '' || newText === '' || newDate === "") {
+      setFormIsValid(false);
+    } else {
+      setFormIsValid(true);
+      const eventDoc = doc(db, 'events', id);
+      const newFields = {
+        title: newTitle,
+        text: newText,
+        date: newDate,
+        link: newLink,
+      };
 
-    try {
-
-      await updateDoc(eventDoc, newFields);
-       window.location.reload();
-    } catch(error) {
-          console.log(error);
+      try {
+        await updateDoc(eventDoc, newFields);
+        window.location.reload();
+        // console.log(newFields);
+      } catch (error) {
+        console.log(error);
+      }
     }
-
   };
 
   return shown ? (
@@ -49,28 +56,41 @@ const EditEventModal = ({ children, shown, close, event }) => {
       >
         <FaWindowClose className={styles.closeBtn} onClick={close} />
 
-        
-          <form className={styles.mainContainer}
-            onSubmit={(e) => {
-             e.preventDefault();
-            
-             close();
-              updateEvent(event.id, event.title, event.text, event.date, event.link);
-            }}
-          >
+        <form
+          className={styles.mainContainer}
+          onSubmit={(e) => {
+            e.preventDefault();
+              
+
+            // close();
+            updateEvent(
+              event.id,
+              event.title,
+              event.text,
+              event.date,
+              event.link
+            );
+              
+          }}
+        >
           <div className={styles.titleContainer}>
-            <p>Titel :</p>
+            <div className={styles.errorContainer}>
+              <p>Title:</p>
+              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
+            </div>
             <input
               type="text"
-              
               value={newTitle}
               onChange={(e) => {
                 setNewTitle(e.target.value);
               }}
             />
+          </div>
+          <div className={styles.textContainer}>
+            <div className={styles.errorContainer}>
+              <p>Text:</p>
+              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
             </div>
-            <div className={styles.textContainer}>
-            <p>Text:</p>
             <textarea
               type="text"
               value={newText}
@@ -78,9 +98,12 @@ const EditEventModal = ({ children, shown, close, event }) => {
                 setNewText(e.target.value);
               }}
             />
+          </div>
+          <div className={styles.dateContainer}>
+            <div className={styles.errorContainer}>
+              <p>Date:</p>
+              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
             </div>
-            <div className={styles.dateContainer}>
-            <p>Datum:</p>
             <input
               type="date"
               value={newDate}
@@ -88,8 +111,8 @@ const EditEventModal = ({ children, shown, close, event }) => {
                 setNewDate(e.target.value);
               }}
             />
-            </div>
-            <div className={styles.linkContainer}>
+          </div>
+          <div className={styles.linkContainer}>
             <p>Länk:</p>
             <input
               type="text"
@@ -98,14 +121,11 @@ const EditEventModal = ({ children, shown, close, event }) => {
                 setNewLink(e.target.value);
               }}
             />
-            </div>
-            <div className={styles.createBtnContainer}>
-
+          </div>
+          <div className={styles.createBtnContainer}>
             <button type="submit">Change name</button>
-            </div>
-          </form>
-          
-        
+          </div>
+        </form>
       </div>
 
       {children}

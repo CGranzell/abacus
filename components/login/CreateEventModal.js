@@ -52,7 +52,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
 
         <form className={styles.mainContainer}>
           <div className={styles.titleContainer}>
-        <div className={styles.errorContainer}>
+            <div className={styles.errorContainer}>
               <p>Title:</p>
               {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
             </div>

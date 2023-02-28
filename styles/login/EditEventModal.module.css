@@ -83,6 +83,17 @@
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
+/* felmeddelande */
+.errorContainer{
+  display: flex;
+  align-items: center;
+}
+
+.errorMessage {
+  font-size: 0.5rem;
+  color:  red;
+}
+
 /* Media Queries */
 @media (max-width: 800px) {
   .titleContainer {
