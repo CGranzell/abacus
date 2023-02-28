@@ -56,8 +56,6 @@ const LoginForm = ({ monitorAuthState }) => {
     loginEmailPassword();
     monitorAuthState();
     
-   
-    console.log(email, password);
   };
 
   return (

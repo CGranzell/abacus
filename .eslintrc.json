@@ -1,11 +1,11 @@
 
 //orginal
-{
-  "extends": "next/core-web-vitals"
-}
+// {
+//   "extends": "next/core-web-vitals"
+// }
 
 
 // Ny kod 
-// {
-//   "extends": ["next/babel","next/core-web-vitals"]
-// }
+{
+  "extends": ["next/babel","next/core-web-vitals"]
+}

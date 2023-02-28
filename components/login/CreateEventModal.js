@@ -13,22 +13,24 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
 
   const createEvent = async (e) => {
     e.preventDefault();
-    // close();
-    // window.location.reload();
-    try {
-
-      await addDoc(eventsCollectionRef, {
-        title: newTitle,
-        text: newText,
-        date: newDate,
-        link: newLink,
-      });
-      window.location.reload();
-    } catch(error) {
-      console.log(error)
+   
+    if (newTitle === "" || newText === "" || newDate === null) {
+      return;
     }
+     else { 
+      try {
+        await addDoc(eventsCollectionRef, {
+          title: newTitle,
+          text: newText,
+          date: newDate,
+          link: newLink,
+        });
 
-
+        window.location.reload();
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
   return shown ? (
@@ -48,10 +50,12 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
       >
         <FaWindowClose className={styles.closeBtn} onClick={close} />
 
-        
         <form className={styles.mainContainer}>
           <div className={styles.titleContainer}>
-            <p>Titel :</p>
+        <div className={styles.errorContainer}>
+              <p>Title:</p>
+              {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
+            </div>
             <input
               type="text"
               onChange={(e) => {
@@ -60,17 +64,22 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
             />
           </div>
           <div className={styles.textContainer}>
-            <p>Text:</p>
+            <div className={styles.errorContainer}>
+              <p>Text:</p>
+              {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
+            </div>
             <textarea
               type="text"
               onChange={(e) => {
                 setNewText(e.target.value);
               }}
             />
-           
           </div>
           <div className={styles.dateContainer}>
-            <p>Datum:</p>
+            <div className={styles.errorContainer}>
+              <p>Date:</p>
+              {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
+            </div>
             <input
               type="date"
               onChange={(e) => {
@@ -88,11 +97,9 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
             />
           </div>
           <div className={styles.createBtnContainer}>
-
-          <button onClick={createEvent}>Skapa Event</button>
+            <button onClick={createEvent}>Skapa Event</button>
           </div>
         </form>
-       
       </div>
 
       {children}
