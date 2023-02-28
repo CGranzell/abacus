@@ -13,29 +13,15 @@ const EventTableRow = ({ event }) => {
 
   return (
     <>
-      <EditEventModal
-        key={event.id}
-        event={event}
-        shown={editModalShown}
-        close={() => {
-          toggleEditModalShown(false);
-        }}
-      />
-      <ConfirmDeleteModal
-        key={event.id}
-        event={event}
-        shown={confirmDeleteModalShown}
-        close={() => {
-          toggleConfirmDeleteModalShown(false);
-        }}
-      />
+      
       <tr className={styles.tr}>
+     
         <td className={styles.tdTitle}>{event.title.substring(0, 20)}</td>
-        <td>{event.text.substring(0, 30)}...</td>
-        <td>
+        <td className={styles.tdTitle}>{event.text.substring(0, 30)}...</td>
+        <td className={styles.tdTitle}>
           <p>{event.date}</p>
         </td>
-        <td>{event.link.substring(0, 20)}</td>
+        <td className={styles.tdTitle}> {event.link.substring(0, 20)}</td>
         <td className={styles.tdBtns}>
           <div className={styles.wrapperBtns}>
             <MdEdit
@@ -48,6 +34,24 @@ const EventTableRow = ({ event }) => {
             />
           </div>
         </td>
+        <td>
+      <EditEventModal
+        // key={key}
+        event={event}
+        shown={editModalShown}
+        close={() => {
+          toggleEditModalShown(false);
+        }}
+      />
+      <ConfirmDeleteModal
+        // key={key}
+        event={event}
+        shown={confirmDeleteModalShown}
+        close={() => {
+          toggleConfirmDeleteModalShown(false);
+        }}
+      />
+      </td>
       </tr>
     </>
   );
