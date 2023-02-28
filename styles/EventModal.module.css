@@ -17,6 +17,8 @@
   background-color: white;
   padding: 25px;
   border-radius: 8px;
+
+  overflow: scroll;
   
 }
 
@@ -61,6 +63,7 @@
   justify-content: center;
   /* border: 1px solid black; */
   min-height: 12rem;
+  margin-bottom: 1rem;
 }
 
 /* Brödtext */
