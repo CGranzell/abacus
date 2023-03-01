@@ -53,9 +53,8 @@ const Admin = ({ setIsLoggedIn, user }) => {
         }}
       />
 
-     
       <div className={styles.mainContainer}>
-           {/* user name och logout */}
+        {/* user name och logout */}
         <div className={styles.userCredContainer}>
           <p>Du är inloggad som {user.email}</p>
           <button onClick={logOut}>Logga ut</button>
@@ -70,39 +69,33 @@ const Admin = ({ setIsLoggedIn, user }) => {
           <h2>Events</h2>
         </div>
         {isLoading ? (
-        <LoadingSpinner />
-      ) : ( 
-        <>
-        {/* tabell med event data */}
-        <div className={styles.tableContainer}>
-        
-
-      
-          <table className={styles.table}>
-            <thead className={styles.thead}>
-              <tr>
-                <th className={styles.thTitle}>Titel</th>
-                <th className={styles.thText}>Text</th>
-                <th className={styles.thDate}>Datum</th>
-                <th className={styles.thLink}>Länk</th>
-                <th className={styles.thEdit}>Redigera</th>
-              </tr>
-            </thead>
-            {events.map((event) => {
-              return (
-                <tbody key={event.id} className={styles.tBody}>
-                  <EventTableRow event={event} />
-                </tbody>
-              );
-            })}
-          </table>
-        
-      
-        </div>
-        </>
+          <LoadingSpinner />
+        ) : (
+          <>
+            {/* tabell med event data */}
+            <div className={styles.tableContainer}>
+              <table className={styles.table}>
+                <thead className={styles.thead}>
+                  <tr>
+                    <th className={styles.thTitle}>Titel</th>
+                    <th className={styles.thText}>Text</th>
+                    <th className={styles.thDate}>Datum</th>
+                    <th className={styles.thLink}>Länk</th>
+                    <th className={styles.thEdit}>Redigera</th>
+                  </tr>
+                </thead>
+                {events.map((event) => {
+                  return (
+                    <tbody key={event.id} className={styles.tBody}>
+                      <EventTableRow event={event} />
+                    </tbody>
+                  );
+                })}
+              </table>
+            </div>
+          </>
         )}
       </div>
-        
     </>
   );
 };

@@ -43,13 +43,11 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
       {isLoading ? (
         <LoadingSpinner />
       ) : (
-
-
-      <div className={styles.cardContainer}>
-        {sortedEvents.slice(0, 6).map((event) => {
-          return <EventCard key={event.id} event={event} />;
-        })}
-      </div>
+        <div className={styles.cardContainer}>
+          {sortedEvents.slice(0, 6).map((event) => {
+            return <EventCard key={event.id} event={event} />;
+          })}
+        </div>
       )}
     </div>
   );
