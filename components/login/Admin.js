@@ -8,6 +8,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
 import { MdAddBox } from 'react-icons/md';
 import EventTableRow from './EventTableRow';
+import LoadingSpinner from '../LoadingSpinner';
 
 const Admin = ({ setIsLoggedIn, user }) => {
   // Alla Events
@@ -22,12 +23,14 @@ const Admin = ({ setIsLoggedIn, user }) => {
   // Hämtar events
   useEffect(() => {
     const getEvents = async () => {
+      setIsLoading(true);
       const data = await getDocs(eventsCollectionRef);
       console.log(data);
       setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
     getEvents();
+    setIsLoading(false);
   }, []);
 
   // Loggar ut
@@ -51,8 +54,11 @@ const Admin = ({ setIsLoggedIn, user }) => {
         }}
       />
 
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : ( 
       <div className={styles.mainContainer}>
-        {/* user name och logout */}
+           {/* user name och logout */}
         <div className={styles.userCredContainer}>
           <p>Du är inloggad som {user.email}</p>
           <button onClick={logOut}>Logga ut</button>
@@ -68,6 +74,9 @@ const Admin = ({ setIsLoggedIn, user }) => {
         </div>
         {/* tabell med event data */}
         <div className={styles.tableContainer}>
+        
+
+      
           <table className={styles.table}>
             <thead className={styles.thead}>
               <tr>
@@ -86,8 +95,12 @@ const Admin = ({ setIsLoggedIn, user }) => {
               );
             })}
           </table>
+        
+      
         </div>
+       
       </div>
+        )}
     </>
   );
 };

@@ -4,9 +4,13 @@ import styles from '../../styles/login/EditEventModal.module.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { updateDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 const EditEventModal = ({ children, shown, close, event }) => {
   const [formIsValid, setFormIsValid] = useState(false);
+
+  // Spinner
+  const [isLoading, setIsLoading] = useState(false);
 
   // Updatera Event
   const [newTitle, setNewTitle] = useState(event.title);
@@ -15,6 +19,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
   const [newLink, setNewLink] = useState(event.link);
 
   const updateEvent = async (id) => {
+    setIsLoading(true);
     if (newTitle === '' || newText === '' || newDate === '') {
       setFormIsValid(false);
     } else {
@@ -26,10 +31,12 @@ const EditEventModal = ({ children, shown, close, event }) => {
         date: newDate,
         link: newLink,
       };
-
+      
       try {
+        
         await updateDoc(eventDoc, newFields);
         window.location.reload();
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -56,6 +63,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
           className={styles.mainContainer}
           onSubmit={(e) => {
             e.preventDefault();
+            
             updateEvent(
               event.id,
               event.title,
@@ -65,7 +73,11 @@ const EditEventModal = ({ children, shown, close, event }) => {
             );
           }}
         >
-          <div className={styles.titleContainer}>
+        {isLoading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+        <div className={styles.titleContainer}>
             <div className={styles.errorContainer}>
               <p>Title:</p>
               {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
@@ -117,6 +129,9 @@ const EditEventModal = ({ children, shown, close, event }) => {
           <div className={styles.createBtnContainer}>
             <button type="submit">Change name</button>
           </div>
+          </>
+      )}
+          
         </form>
       </div>
 
