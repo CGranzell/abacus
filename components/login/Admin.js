@@ -15,7 +15,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
   const [events, setEvents] = useState([]);
 
   // Spinner
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Referens till databasen
   const eventsCollectionRef = collection(db, 'events');
@@ -23,7 +23,6 @@ const Admin = ({ setIsLoggedIn, user }) => {
   // Hämtar events
   useEffect(() => {
     const getEvents = async () => {
-      setIsLoading(true);
       const data = await getDocs(eventsCollectionRef);
       console.log(data);
       setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -35,10 +34,10 @@ const Admin = ({ setIsLoggedIn, user }) => {
 
   // Loggar ut
   const logOut = async () => {
-    setIsLoading(true);
+    // setIsLoading(true);
     await signOut(auth);
     setIsLoggedIn(false);
-    setIsLoading(false);
+    // setIsLoading(false);
   };
 
   // Modal För Att skapa Event
@@ -54,9 +53,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
         }}
       />
 
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : ( 
+     
       <div className={styles.mainContainer}>
            {/* user name och logout */}
         <div className={styles.userCredContainer}>
@@ -72,6 +69,10 @@ const Admin = ({ setIsLoggedIn, user }) => {
         <div className={styles.h2Container}>
           <h2>Events</h2>
         </div>
+        {isLoading ? (
+        <LoadingSpinner />
+      ) : ( 
+        <>
         {/* tabell med event data */}
         <div className={styles.tableContainer}>
         
@@ -98,9 +99,10 @@ const Admin = ({ setIsLoggedIn, user }) => {
         
       
         </div>
-       
-      </div>
+        </>
         )}
+      </div>
+        
     </>
   );
 };

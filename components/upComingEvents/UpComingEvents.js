@@ -11,7 +11,7 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
   const [events, setEvents] = useState([]);
 
   // Spinner
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Referens till databasen
   const eventsCollectionRef = collection(db, 'events');
@@ -19,7 +19,6 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
   // Hämtar events
   useEffect(() => {
     const getEvents = async () => {
-      setIsLoading(true);
       const data = await getDocs(eventsCollectionRef);
       console.log(data);
       setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
