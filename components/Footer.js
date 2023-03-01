@@ -44,11 +44,9 @@ const Footer = () => {
             </div>
             <div className={styles.iconsSocial}>
               <Link href={'/'}>
-                {' '}
                 <FaFacebookSquare className={styles.icon} />
               </Link>
               <Link href={'/'}>
-                {' '}
                 <FaInstagramSquare className={styles.icon} />
               </Link>
               <Link href={'/'}>

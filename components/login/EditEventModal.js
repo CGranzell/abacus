@@ -6,7 +6,6 @@ import { updateDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
 
 const EditEventModal = ({ children, shown, close, event }) => {
-
   const [formIsValid, setFormIsValid] = useState(false);
 
   // Updatera Event
@@ -16,7 +15,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
   const [newLink, setNewLink] = useState(event.link);
 
   const updateEvent = async (id) => {
-    if (newTitle === '' || newText === '' || newDate === "") {
+    if (newTitle === '' || newText === '' || newDate === '') {
       setFormIsValid(false);
     } else {
       setFormIsValid(true);

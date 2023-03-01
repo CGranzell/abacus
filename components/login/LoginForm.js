@@ -9,7 +9,6 @@ const LoginForm = ({ monitorAuthState }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
- 
   // Meddelanden
   const [errorMessage, setErrorMessage] = useState('');
 

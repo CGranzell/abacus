@@ -13,8 +13,8 @@ const Admin = ({ setIsLoggedIn, user }) => {
   // Alla Events
   const [events, setEvents] = useState([]);
 
-    // Spinner
-    const [isLoading, setIsLoading] = useState(false);
+  // Spinner
+  const [isLoading, setIsLoading] = useState(false);
 
   // Referens till databasen
   const eventsCollectionRef = collection(db, 'events');
@@ -43,7 +43,6 @@ const Admin = ({ setIsLoggedIn, user }) => {
 
   return (
     <>
-
       <CreateEventModal
         eventsCollectionRef={eventsCollectionRef}
         shown={createModalShown}
@@ -51,7 +50,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
           toggleCreateModalShown(false);
         }}
       />
-      
+
       <div className={styles.mainContainer}>
         {/* user name och logout */}
         <div className={styles.userCredContainer}>
@@ -60,7 +59,9 @@ const Admin = ({ setIsLoggedIn, user }) => {
         </div>
 
         <div className={styles.addEventBtnContainer}>
-          <button onClick={toggleCreateModalShown}>Lägg till event <MdAddBox className={styles.addIcon}/></button>
+          <button onClick={toggleCreateModalShown}>
+            Lägg till event <MdAddBox className={styles.addIcon} />
+          </button>
         </div>
         <div className={styles.h2Container}>
           <h2>Events</h2>

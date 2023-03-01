@@ -34,7 +34,6 @@ const EventTableRow = ({ event }) => {
         </td>
         <td>
           <EditEventModal
-            // key={key}
             event={event}
             shown={editModalShown}
             close={() => {
@@ -42,7 +41,6 @@ const EventTableRow = ({ event }) => {
             }}
           />
           <ConfirmDeleteModal
-            // key={key}
             event={event}
             shown={confirmDeleteModalShown}
             close={() => {

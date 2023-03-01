@@ -13,11 +13,10 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
 
   const createEvent = async (e) => {
     e.preventDefault();
-   
-    if (newTitle === "" || newText === "" || newDate === null) {
+
+    if (newTitle === '' || newText === '' || newDate === null) {
       return;
-    }
-     else { 
+    } else {
       try {
         await addDoc(eventsCollectionRef, {
           title: newTitle,
@@ -54,7 +53,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
           <div className={styles.titleContainer}>
             <div className={styles.errorContainer}>
               <p>Title:</p>
-              {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
+              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
             </div>
             <input
               type="text"
@@ -66,7 +65,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
           <div className={styles.textContainer}>
             <div className={styles.errorContainer}>
               <p>Text:</p>
-              {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
+              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
             </div>
             <textarea
               type="text"
@@ -78,7 +77,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
           <div className={styles.dateContainer}>
             <div className={styles.errorContainer}>
               <p>Date:</p>
-              {<p className={styles.errorMessage}> * Obligatoriskt fält  </p>}
+              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
             </div>
             <input
               type="date"
