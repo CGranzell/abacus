@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from '../../styles/login/CreateEventModal.module.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { addDoc } from 'firebase/firestore';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
   // Skapa event
@@ -11,9 +12,12 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
   const [newDate, setNewDate] = useState(null);
   const [newLink, setNewLink] = useState('');
 
+  // Spinner
+  const [isLoading, setIsLoading] = useState(false);
+
   const createEvent = async (e) => {
     e.preventDefault();
-
+      setIsLoading(true);
     if (newTitle === '' || newText === '' || newDate === null) {
       return;
     } else {
@@ -26,6 +30,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
         });
 
         window.location.reload();
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -62,6 +67,11 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
               }}
             />
           </div>
+          {isLoading ? (
+        <LoadingSpinner />
+      ) : ( 
+            <>
+      
           <div className={styles.textContainer}>
             <div className={styles.errorContainer}>
               <p>Text:</p>
@@ -98,6 +108,8 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
           <div className={styles.createBtnContainer}>
             <button onClick={createEvent}>Skapa Event</button>
           </div>
+          </>
+          )}
         </form>
       </div>
 
