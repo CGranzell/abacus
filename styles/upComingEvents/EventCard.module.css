@@ -7,7 +7,7 @@
 }
 
 /* Datum Container*/
-.dateContainer{
+.dateContainer {
   height: 100%;
   width: 30%;
   background-color: #00000000;
@@ -17,7 +17,7 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 /* Månad och Dag */
-.monthDateContainer{
+.monthDateContainer {
   height: 50%;
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@
   font-weight: 900;
 }
 /* År */
-.yearContainer{
+.yearContainer {
   height: 50%;
   width: 100%;
   display: flex;
@@ -66,7 +66,6 @@
   justify-content: center;
   align-items: center;
   font-size: 0.6rem;
- 
 }
 /* Läs mer */
 .readMoreContainer {
@@ -80,7 +79,6 @@
 }
 
 .readMoreContainer button {
-
   color: #000000;
   text-decoration: none;
   border: none;
@@ -88,13 +86,10 @@
   cursor: pointer;
 }
 
-
-  
-
 .readMoreContainer:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
- border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .arrow {
@@ -108,11 +103,11 @@
 
 /* Media Queries */
 @media (max-width: 800px) {
-  .monthDateContainer{
+  .monthDateContainer {
     font-size: 0.7rem;
     font-weight: 700;
   }
-  .yearContainer{
+  .yearContainer {
     font-size: 1rem;
     font-weight: 700;
   }
@@ -127,8 +122,7 @@
 }
 
 @media (max-width: 499px) {
-  .mainContainer{
-
+  .mainContainer {
     height: 5rem;
   }
 }

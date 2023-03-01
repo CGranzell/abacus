@@ -2,56 +2,52 @@
   text-align: center;
 }
 
-
 .wrapperBtns {
   display: flex;
   justify-content: space-evenly;
 }
 
-.iconEdit{
+.iconEdit {
   font-size: 1.5rem;
- transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }
-.iconEdit:hover{
+.iconEdit:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-.iconDelete{
+.iconDelete {
   font-size: 1.5rem;
   background: none;
   border: none;
   transition: 0.3 ease-in-out;
 }
-.iconDelete:hover{
+.iconDelete:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
 @media (max-width: 699px) {
-
-  .tr { 
+  .tr {
     font-size: 0.6rem;
   }
 
-  .iconEdit{
+  .iconEdit {
     font-size: 1rem;
   }
-  .iconDelete{
+  .iconDelete {
     font-size: 1rem;
-    
   }
 }
 
 @media (max-width: 399px) {
-  .tr { 
+  .tr {
     font-size: 0.4rem;
   }
 
-  .iconEdit{
+  .iconEdit {
     font-size: 0.7rem;
   }
-  .iconDelete{
+  .iconDelete {
     font-size: 0.7rem;
-    
   }
 }

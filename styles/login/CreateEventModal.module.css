@@ -20,10 +20,10 @@
 }
 
 .closeBtn {
- color: black;
- background: none;
- border: none;
- transition: 0.3 ease-in-out;
+  color: black;
+  background: none;
+  border: none;
+  transition: 0.3 ease-in-out;
 }
 
 .closeBtn:hover {
@@ -31,7 +31,7 @@
   transform: scale(1.2);
 }
 
-.mainContainer > *  {
+.mainContainer > * {
   padding: 0.5rem 0rem;
 }
 
@@ -53,13 +53,12 @@
   height: 8rem;
 }
 
-.dateContainer{
+.dateContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 2rem;
 }
-
 
 /* Länk  */
 .linkContainer {
@@ -73,24 +72,24 @@
   justify-content: center;
 }
 .createBtnContainer button {
-height: 2rem;
-width: 6rem;
-border-radius: 4px;
-background-color: white;
-cursor: pointer;
-border: none;
-box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
 /* felmeddelande */
-.errorContainer{
+.errorContainer {
   display: flex;
   align-items: center;
 }
 
 .errorMessage {
   font-size: 0.5rem;
-  color:  red;
+  color: red;
 }
 
 /* Media Queries */
@@ -98,17 +97,14 @@ box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   .titleContainer {
     min-height: 2rem;
   }
-  
-  .dateContainer{
+  .dateContainer {
     min-height: 1.5rem;
   }
   .textContainer {
-   
     min-height: 8rem;
   }
   .pContainer {
     font-size: 0.7rem;
-  
   }
 }
 
@@ -116,21 +112,16 @@ box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   .modalContent {
     width: 60%;
     height: 60%;
-    
   }
   .titleContainer {
     font-size: 0.9rem;
   }
-  
-  .dateContainer{
+  .dateContainer {
     font-size: 0.7rem;
   }
-  
   .pContainer {
     font-size: 0.4rem;
-  
   }
-
   .linkContainer {
     font-size: 0.6rem;
   }

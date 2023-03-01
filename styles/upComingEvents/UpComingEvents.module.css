@@ -1,17 +1,16 @@
-.mainContainer{
+.mainContainer {
   margin-top: 5rem;
- height: 30rem;
- width: 100%;
- background-color: white;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- 
+  height: 30rem;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Rubrik */
-.headerContainer{
+.headerContainer {
   height: 4rem;
   width: 100%;
   display: flex;
@@ -23,9 +22,8 @@
 /* Kort container */
 .cardContainer {
   width: 80%;
-  
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 2rem;
   column-gap: 2rem;
@@ -33,24 +31,22 @@
 
 /* Media Queries */
 @media (max-width: 699px) {
-  .mainContainer{
+  .mainContainer {
     height: 35rem;
   }
   .cardContainer {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  .headerContainer h1{
+  .headerContainer h1 {
     font-size: 0.9rem;
   }
 }
 /* Media Queries */
 @media (max-width: 499px) {
-  .mainContainer{
+  .mainContainer {
     height: 50rem;
   }
   .cardContainer {
- 
-    grid-template-columns: repeat(1,1fr);
-  
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -17,16 +17,14 @@
   background-color: white;
   padding: 25px;
   border-radius: 8px;
-
   overflow-y: scroll;
-  
 }
 
 .closeBtn {
- color: black;
- background: none;
- border: none;
- transition: 0.3 ease-in-out;
+  color: black;
+  background: none;
+  border: none;
+  transition: 0.3 ease-in-out;
 }
 
 .closeBtn:hover {
@@ -41,27 +39,22 @@
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
-  /* border: 1px solid black; */
   min-height: 3rem;
 }
 
-.dateContainer{
+.dateContainer {
   display: flex;
   justify-content: center;
   min-height: 2rem;
-  /* border: 1px solid black; */
 }
 /* Månad och Dag */
-.monthDateContainer{
- margin-right: 1rem;
-  /* border: 1px solid black; */
+.monthDateContainer {
+  margin-right: 1rem;
 }
-
 
 .textContainer {
   display: flex;
   justify-content: center;
-  /* border: 1px solid black; */
   min-height: 12rem;
   margin-bottom: 1rem;
 }
@@ -69,16 +62,13 @@
 /* Brödtext */
 .pContainer {
   width: 90%;
-  /* border: 1px solid black; */
-
 }
 
 /* Länk  */
 .linkContainer {
   display: flex;
   flex-direction: column;
-align-items: center;
-  /* border: 1px solid black; */
+  align-items: center;
 }
 
 /* Media Queries */
@@ -86,17 +76,15 @@ align-items: center;
   .titleContainer {
     min-height: 2rem;
   }
-  
-  .dateContainer{
+
+  .dateContainer {
     min-height: 1.5rem;
   }
   .textContainer {
-   
     min-height: 8rem;
   }
   .pContainer {
     font-size: 0.7rem;
-  
   }
 }
 
@@ -104,20 +92,17 @@ align-items: center;
   .modalContent {
     width: 60%;
     height: 60%;
-  
-    
   }
   .titleContainer {
     font-size: 0.9rem;
   }
-  
-  .dateContainer{
+
+  .dateContainer {
     font-size: 0.7rem;
   }
-  
+
   .pContainer {
     font-size: 0.6rem;
-  
   }
 
   .linkContainer {

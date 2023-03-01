@@ -1,23 +1,21 @@
-
 /* Form */
 .formContainer {
   height: 25rem;
   width: 20rem;
- 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .inputContainer {
   height: 5rem;
   width: 80%;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
- justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .inputContainer input {
@@ -30,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
 }
 
 .btnContainer button {
@@ -44,6 +41,6 @@
   transition: 0.4s;
 }
 .btnContainer button:hover {
-cursor: pointer;
-transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }

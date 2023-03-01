@@ -1,25 +1,22 @@
 .mainContainer {
-  /* height: 100%; */
   min-height: 100vh;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.userCredContainer{
+.userCredContainer {
   height: 5rem;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.userCredContainer p{
+.userCredContainer p {
   font-size: 1rem;
- }
-.userCredContainer button{
+}
+.userCredContainer button {
   height: 2rem;
   width: 6rem;
   border-radius: 2px;
@@ -29,18 +26,16 @@
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
-.addEventBtnContainer{
+.addEventBtnContainer {
   height: 5rem;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.addEventBtnContainer button{
+.addEventBtnContainer button {
   height: 5rem;
   width: 40%;
-  /* border: 1px solid black; */
   border-radius: 6px;
   cursor: pointer;
   background-color: white;
@@ -53,10 +48,9 @@
   font-size: 2rem;
 }
 
-.h2Container{
+.h2Container {
   height: 5rem;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +61,6 @@
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-bottom: 5rem;
-  
 }
 /* Tabell */
 .table {
@@ -75,74 +68,67 @@
 }
 
 /* Tabell head */
-
-
-.thTitle{
+.thTitle {
   width: 20%;
 }
 
-.thText{
+.thText {
   width: 30%;
 }
 
-.thDate{
+.thDate {
   width: 15%;
 }
 
-.thLink{
+.thLink {
   width: 15%;
 }
 
-.thEdit{
+.thEdit {
   width: 20%;
 }
 
-
 /* Tabell body */
 
-.tBody{
+.tBody {
   height: 4rem;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-
-
 
 .wrapperBtns {
   display: flex;
   justify-content: space-evenly;
 }
 
-.iconEdit{
+.iconEdit {
   font-size: 1.5rem;
- transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }
-.iconEdit:hover{
+.iconEdit:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-.iconDelete{
+.iconDelete {
   font-size: 1.5rem;
   background: none;
   border: none;
   transition: 0.3 ease-in-out;
 }
-.iconDelete:hover{
+.iconDelete:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
 @media (max-width: 699px) {
-  .userCredContainer p{
-   font-size: 0.7rem;
+  .userCredContainer p {
+    font-size: 0.7rem;
   }
-
-  .addEventBtnContainer button{
+  .addEventBtnContainer button {
     height: 3rem;
-    
-    
     font-size: 1rem;
   }
-  
+
   .addIcon {
     font-size: 1rem;
   }
