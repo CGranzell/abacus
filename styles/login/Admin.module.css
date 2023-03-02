@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  
 }
 .userCredContainer p {
   font-size: 1rem;
@@ -32,6 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .addEventBtnContainer button {
   height: 5rem;
@@ -42,10 +44,19 @@
   border: none;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
+
+
 
 .addIcon {
   font-size: 2rem;
+  transition: 0.3 ease-in-out;
+}
+.addIcon:hover  {
+  transform: scale(1.1);
 }
 
 .h2Container {
