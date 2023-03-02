@@ -68,7 +68,7 @@ const LoginForm = ({ monitorAuthState }) => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label>Password</label>
+        <label>Lösenord</label>
         <input
           type="password"
           name="password"
