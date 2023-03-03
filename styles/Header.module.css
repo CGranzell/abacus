@@ -8,9 +8,8 @@
 
 /* logo */
 .logoContainer {
-  margin-left: 50px;
   height: 100%;
-  width: 20%;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
@@ -24,7 +23,7 @@
 .logo {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: 0.3s ease-in-out;
 }
 
@@ -35,7 +34,7 @@
 /* page links */
 .pageLinksContainer {
   height: 100%;
-  width: 60%;
+  width: 30%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -43,7 +42,7 @@
 
 .pageLinksContainer a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: black;
   transition: 0.3s ease-in-out;
 }
@@ -66,8 +65,8 @@
 }
 
 .icon {
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -183,6 +182,7 @@
   /* logo */
   .logoContainer {
     width: 40%;
+    margin-left: 50px;
   }
 
   .pageLinksContainer,
