@@ -46,7 +46,7 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
   return (
     <div className={styles.mainContainer} ref={ref}>
       <div className={styles.headerContainer}>
-        <h1>Kommande Events</h1>
+        <h1>Kommande events</h1>
       </div>
 
       {isLoading ? (
