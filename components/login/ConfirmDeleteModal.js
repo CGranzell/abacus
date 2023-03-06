@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import styles from '../../styles/login/ConfirmDeleteModal.module.css';
-import { FaWindowClose } from 'react-icons/fa';
+// import { FaWindowClose } from 'react-icons/fa';
+import { GrClose } from 'react-icons/gr';
 import { doc, deleteDoc } from 'firebase/firestore';
 import { db } from '@/firebase';
 
@@ -29,7 +30,7 @@ const ConfirmDeleteModal = ({ children, shown, close, event }) => {
           e.stopPropagation();
         }}
       >
-        <FaWindowClose className={styles.closeBtn} onClick={close} />
+        <GrClose className={styles.closeBtn} onClick={close} />
         <div className={styles.confirmContainer}>
           <p>Är du säker på att du vill radera eventet?</p>
           <form
@@ -39,11 +40,11 @@ const ConfirmDeleteModal = ({ children, shown, close, event }) => {
             }}
           >
             <div className={styles.btnContainer}>
-              <button type="submit" className={styles.confirmBtn}>
-                Radera
-              </button>
               <button onClick={(e) => close()} className={styles.noBtn}>
                 Avbryt
+              </button>
+              <button type="submit" className={styles.confirmBtn}>
+                Radera
               </button>
             </div>
           </form>

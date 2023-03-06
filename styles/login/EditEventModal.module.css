@@ -16,10 +16,13 @@
   height: 80%;
   background-color: white;
   padding: 25px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
+  position: relative;
 }
 
 .closeBtn {
+  position: absolute;
+  right: 5%;
   color: black;
   background: none;
   border: none;
@@ -35,51 +38,105 @@
   padding: 0.5rem 0rem;
 }
 
+/* Rubrik */
+.formTitleContainer{
+  width: 12%;
+  /* border: 1px solid black; */
+}
+.input {
+  width: 78%;
+  height: 2rem;
+}
+
+.dateInput{
+  width: 33%;
+}
+
+.timeText{
+  margin-left: 50%;
+}
+
+/* .formDateContainer {
+  width: 12%;
+  border: 1px solid black;
+} */
+
 /* Titel */
 .titleContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.5rem;
-  min-height: 3rem;
+  /* border: 1px solid black; */
 }
+
 
 .textContainer {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  /* border: 1px solid black; */
 }
 
 .textContainer textarea {
-  height: 8rem;
+  height: 6rem;
 }
 
 .dateContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 2rem;
+  /* flex-direction: column; */
+  /* justify-content: center;
+  min-height: 2rem; */
+  /* border: 1px solid black; */
 }
 
-/* Länk  */
+/* Plats  */
+.locationContainer {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* border: 1px solid black; */
+}
+
+/* Länk */
 .linkContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* border: 1px solid black; */
 }
 
 .createBtnContainer {
   display: flex;
   justify-content: center;
+  /* border: 1px solid black; */
+  
 }
-.createBtnContainer button {
+
+.btnWrapper{
+  width: 80%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.abortBtn{
+height: 2rem;
+width: 6rem;
+background-color: white;
+  color: #388E57;
+  border: 2px solid #388E57;
+  border-radius: 4px;
+}
+
+.saveBtn{
   height: 2rem;
   width: 6rem;
-  border-radius: 4px;
-  background-color: white;
-  cursor: pointer;
+  margin-left: 1rem;
+  background-color: #388E57;
+  color: white;
   border: none;
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 4px;
 }
+
+.saveBtn:hover { cursor: pointer;}
+.abortBtn:hover { cursor: pointer;}
 
 /* felmeddelande */
 .errorContainer {
@@ -92,37 +149,21 @@
   color: red;
 }
 
-/* Media Queries */
-@media (max-width: 800px) {
-  .titleContainer {
-    min-height: 2rem;
-  }
-  .dateContainer {
-    min-height: 1.5rem;
-  }
-  .textContainer {
-    min-height: 8rem;
-  }
-  .pContainer {
-    font-size: 0.7rem;
-  }
-}
 
-@media (max-width: 499px) {
+
+@media (max-width: 699px) {
   .modalContent {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 70%;
   }
-  .titleContainer {
-    font-size: 0.9rem;
-  }
-  .dateContainer {
-    font-size: 0.7rem;
-  }
-  .pContainer {
-    font-size: 0.4rem;
-  }
-  .linkContainer {
+
+  .formTitleContainer{
+    width: 12%;
     font-size: 0.6rem;
   }
+  
+  .timeText{
+    margin-left: 10%;
+  }
+
 }

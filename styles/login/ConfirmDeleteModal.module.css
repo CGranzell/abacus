@@ -12,14 +12,16 @@
 }
 
 .modalContent {
-  width: 50%;
-  height: 30%;
+  width: 30%;
+  height: 35%;
   background-color: white;
   padding: 25px;
-  border-radius: 8px;
+  position: relative;
 }
 
 .closeBtn {
+  position: absolute;
+  right: 5%;
   color: black;
   background: none;
   border: none;
@@ -37,12 +39,15 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  /* border: 1px solid black; */
+  font-size: 0.8rem;
 }
 
 .btnContainer {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  /* border: 1px solid black; */
 }
 
 .confirmBtn {
@@ -52,6 +57,7 @@
   color: white;
   border: none;
   border-radius: 6px;
+  margin-left: 5%;
 }
 
 .confirmBtn:hover {

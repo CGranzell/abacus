@@ -7,7 +7,7 @@ const WelcomeTextCard = ( { onBackClick }) => {
     <div className={styles.mainContainer}>
       <div className={styles.headerContainer}>
         <h1>Välkommen till AbacusCamp </h1>
-        <p> - Avancerad matematik och programmering - </p>
+        <p>  Avancerad matematik och programmering  </p>
       </div>
       <div className={styles.textContainer}>
       <div className={styles.textWrapper}>

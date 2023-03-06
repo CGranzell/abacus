@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import styles from '../../styles/login/EditEventModal.module.css';
-import { FaWindowClose } from 'react-icons/fa';
+// import { FaWindowClose } from 'react-icons/fa';
+import { GrClose } from 'react-icons/gr';
 import { updateDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
 import LoadingSpinner from '../../components/LoadingSpinner';
@@ -16,7 +17,9 @@ const EditEventModal = ({ children, shown, close, event }) => {
   const [newTitle, setNewTitle] = useState(event.title);
   const [newText, setNewText] = useState(event.text);
   const [newDate, setNewDate] = useState(event.date);
+  const [newTime, setNewTime] = useState(event.time);
   const [newLink, setNewLink] = useState(event.link);
+  const [newLocation, setNewLocation] = useState(event.location);
 
   const updateEvent = async (id) => {
     setIsLoading(true);
@@ -27,9 +30,11 @@ const EditEventModal = ({ children, shown, close, event }) => {
       const eventDoc = doc(db, 'events', id);
       const newFields = {
         title: newTitle,
-        text: newText,
-        date: newDate,
-        link: newLink,
+          text: newText,
+          date: newDate,
+          time: newTime,
+          link: newLink,
+          location: newLocation,
       };
       
       try {
@@ -58,7 +63,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
           e.stopPropagation();
         }}
       >
-        <FaWindowClose className={styles.closeBtn} onClick={close} />
+        <GrClose className={styles.closeBtn} onClick={close} />
         <form
           className={styles.mainContainer}
           onSubmit={(e) => {
@@ -69,7 +74,9 @@ const EditEventModal = ({ children, shown, close, event }) => {
               event.title,
               event.text,
               event.date,
-              event.link
+              event.time,
+              event.link,
+              event.location,
             );
           }}
         >
@@ -78,11 +85,13 @@ const EditEventModal = ({ children, shown, close, event }) => {
       ) : (
         <>
         <div className={styles.titleContainer}>
-            <div className={styles.errorContainer}>
-              <p>Title:</p>
-              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
-            </div>
-            <input
+        <div className={styles.formTitleContainer}>
+            {/* <div className={styles.errorContainer}> */}
+              <p>Titel</p>
+              </div>
+              {/* {<p className={styles.errorMessage}> * Obligatoriskt fält </p>} */}
+            {/* </div> */}
+            <input className={styles.input}
               type="text"
               value={newTitle}
               onChange={(e) => {
@@ -91,11 +100,15 @@ const EditEventModal = ({ children, shown, close, event }) => {
             />
           </div>
           <div className={styles.textContainer}>
-            <div className={styles.errorContainer}>
-              <p>Text:</p>
-              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
-            </div>
+          <div className={styles.formTitleContainer}>
+
+              <p>Text</p>
+          </div>
+            {/* <div className={styles.errorContainer}> */}
+              {/* {<p className={styles.errorMessage}> * Obligatoriskt fält </p>} */}
+            {/* </div> */}
             <textarea
+            className={styles.input}
               type="text"
               value={newText}
               onChange={(e) => {
@@ -104,21 +117,47 @@ const EditEventModal = ({ children, shown, close, event }) => {
             />
           </div>
           <div className={styles.dateContainer}>
-            <div className={styles.errorContainer}>
-              <p>Date:</p>
+          <div className={styles.formTitleContainer}>
+                  <p>Datum</p>
+                </div>
+            {/* <div className={styles.errorContainer}>
               {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
-            </div>
-            <input
+            </div> */}
+            <input className={styles.dateInput}
               type="date"
               value={newDate}
               onChange={(e) => {
                 setNewDate(e.target.value);
               }}
             />
+          <div className={styles.formTitleContainer}>
+          <p className={styles.timeText}>Tid</p>
+          </div>
+            <input className={styles.dateInput}
+              type="time"
+              value={newTime}
+              onChange={(e) => {
+                setNewTime(e.target.value);
+              }}
+            />
+          </div>
+          <div className={styles.locationContainer}>
+          <div className={styles.formTitleContainer}>
+                  <p>Plats</p>
+                </div>
+            <input className={styles.input}
+              type="text"
+              value={newLocation}
+              onChange={(e) => {
+                setNewLocation(e.target.value);
+              }}
+            />
           </div>
           <div className={styles.linkContainer}>
-            <p>Länk:</p>
-            <input
+          <div className={styles.formTitleContainer}>
+                  <p>Länk</p>
+                </div>
+            <input className={styles.input}
               type="text"
               value={newLink}
               onChange={(e) => {
@@ -127,7 +166,16 @@ const EditEventModal = ({ children, shown, close, event }) => {
             />
           </div>
           <div className={styles.createBtnContainer}>
-            <button type="submit">Change name</button>
+          <div className={styles.btnWrapper}>
+          <button className={styles.abortBtn}
+                  onClick={() => {
+                    close();
+                  }}
+                >
+                  Avbryt
+                </button>
+            <button className={styles.saveBtn} type="submit">Spara</button>
+            </div>
           </div>
           </>
       )}
