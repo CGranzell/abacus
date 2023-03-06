@@ -77,7 +77,10 @@ const EventModal = ({ children, shown, close, event }) => {
           </div>
           <div className={styles.rightBottomContainer}>
             <div className={styles.linkToEventContainer}>
-              <Link href={event.link}>
+              <Link
+              
+              href={`https://${event.link}`}
+              >
                 Anmälan till {event.title} {'>'}
               </Link>
             </div>
