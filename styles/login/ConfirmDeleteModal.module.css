@@ -81,6 +81,8 @@
 @media (max-width: 499px) {
   .modalContent {
     width: 70%;
+    height: 20%;
+    
   }
 
   .confirmContainer p {

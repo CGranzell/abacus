@@ -107,6 +107,12 @@
 
 /* Media Queries */
 @media (max-width: 800px) {
+
+  .mainContainer {
+    
+    margin-bottom: 2rem;
+  }
+
   .monthDateContainer {
     font-size: 0.7rem;
     font-weight: 700;
@@ -125,5 +131,9 @@
   }
   .readMoreContainer {
     font-size: 0.7rem;
+  }
+
+  .readMoreContainer:hover .arrow {
+    transform: translateX(0px);
   }
 }

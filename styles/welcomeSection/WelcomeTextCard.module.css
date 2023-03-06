@@ -101,6 +101,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    
   }
   .ctaContainer button {
     width: 100%;
@@ -108,6 +109,11 @@
    
     border: none;
     border-radius: 4px;
+    font-size: 0.7rem;
+  }
+
+  .ctaContainer button:hover {
+    
     font-size: 0.7rem;
   }
 }
@@ -126,4 +132,6 @@
     font-size: 0.6rem;
    
   }
+
+ 
 }

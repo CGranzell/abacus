@@ -214,6 +214,7 @@
   .addEventBtn {
     height: 1.5rem;
     width: 50%;
+    border-radius: 2px;
   }
   
   .thTitle, 
@@ -221,7 +222,7 @@
   .thDate, 
   .thLink, 
   .thEdit {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   
 }

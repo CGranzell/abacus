@@ -37,12 +37,13 @@
 /* Media Queries */
 @media (max-width: 699px) {
   .mainContainer {
-    height: 35rem;
+    height: auto;
   }
   .cardContainer {
     grid-template-columns: repeat(2, 1fr);
   }
   .headerContainer h1 {
+    margin-top: 2rem;
     font-size: 0.9rem;
   }
 }
