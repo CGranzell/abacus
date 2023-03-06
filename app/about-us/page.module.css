@@ -1,5 +1,6 @@
 .mainContainer {
   width: 100%;
+  
 }
 /* Bild Container */
 .imgContainer {
@@ -8,11 +9,22 @@
   position: relative;
 }
 
-.h1 {
+.h1Wrapper {
   position: absolute;
+  left: 50%;
   top: 50%;
-  left: 45%;
-  color: white;
+  transform: translate(-50%,-50%);
+  height: 5rem;
+  width: 10rem;
+  border: 2px solid #DC3926;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+ 
+  color: #808080;
 }
 
 .mathImg {
@@ -53,7 +65,7 @@
 }
 
 .topImgContainer {
-  height: 70%;
+  height: 90%;
   width: 70%;
   position: relative;
   /* border: 1px solid black; */
@@ -64,13 +76,44 @@
   height: 100%;
   width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* border: 1px solid black; */
 }
+
+.titleContainer{
+  width: 100%;
+  
+  /* border: 1px solid black; */
+}
+
+.contentWrapper{
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+ 
+}
+
+.lineContainer {
+  width: 1%;
+  min-height: 100%;
+  /* border: 1px solid black; */
+  background-color: red;
+  
+}
+
+.textContainer {
+  width: 97%;
+  height: 100%;
+  /* border: 1px solid black; */
+  margin-left: 2%;
+  
+}
+
 .topRightContainer h3 {
-  text-align: center;
-  margin-bottom: 2rem;
+  /* text-align: center; */
+  margin-bottom: 0.7rem;
   /* border: 1px solid black; */
 }
 .topRightContainer p {
@@ -90,6 +133,7 @@
   width: 100%;
   display: flex;
   /* border: 1px solid black; */
+  background-color: #F1F1F1;
 }
 
 /* bottom left container */
@@ -103,8 +147,8 @@
 }
 
 .bottomLeftContainer h3 {
-  text-align: center;
-  margin-bottom: 2rem;
+  /* text-align: center; */
+  margin-bottom: 0.7rem;
   /* border: 1px solid black; */
 }
 .bottomLeftContainer p {
@@ -129,7 +173,7 @@
 }
 
 .bottomImgContainer {
-  height: 70%;
+  height: 62%;
   width: 70%;
   position: relative;
   /* border: 1px solid black; */
@@ -144,25 +188,30 @@
 
 /* Media Queries */
 @media (max-width: 699px) {
-  .h1 {
+  /* .h1 {
     left: 35%;
-  }
+  } */
+  
   .topContainer {
+    height: auto;
     flex-direction: column;
   }
   .bottomContainer {
     height: 50%;
+   
     flex-direction: column;
   }
   /* top left container */
   .topLeftContainer {
-    height: 50%;
-    width: 100%;
+    /* height: 50%;
+    width: 100%; */
+    display: none;
     /* border: 1px solid black; */
   }
 
   .topRightContainer {
-    height: 50%;
+    /* height: 70%; */
+    height: 15rem;
     width: 100%;
     /* border: 1px solid black; */
   }
@@ -176,7 +225,7 @@
   }
 
   .bottomLeftContainer {
-    height: 50%;
+    height: 15rem;
     width: 100%;
     /* border: 1px solid black; */
   }

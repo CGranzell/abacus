@@ -1,15 +1,20 @@
 import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
-import math from '../../public/images/math.jpg';
-import omOssTop from '../../public/images/lecture.jpg';
-import omOssBottom from '../../public/images//om-oss-bottom.jpg';
+// import math from '../../public/images/math.jpg';
+import math from '../../public/images/elev-grey.png';
+// import omOssTop from '../../public/images/lecture.jpg';
+import omOssTop from '../../public/images/about-us-grey.png';
+// import omOssBottom from '../../public/images//om-oss-bottom.jpg';
+import omOssBottom from '../../public/images/linjal-grey.png';
 
 const page = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.imgContainer}>
-        <h1 className={styles.h1}>Om Oss</h1>
+        <div className={styles.h1Wrapper}>
+          <h1 className={styles.h1}>Om Oss</h1>
+        </div>
         <Image src={math} alt="" sizes="true" className={styles.mathImg} />
       </div>
       <div className={styles.textContainer}>
@@ -27,19 +32,36 @@ const page = () => {
           </div>
           <div className={styles.topRightContainer}>
             <div className={styles.topRightTextContainer}>
+            <div className={styles.titleContainer}>
               <h3>PROJEKTGRUPPEN</h3>
-              <p>
-                Projektgruppen som har utvecklat ABACUSCAMP är: Christer
-                Norström, professor och ordförande stiftelsen Fryx, ordförande
-                ABB Gymnasiet, Petra Nygård, rektor Mälardalen International
-                School, Peter Kallioniemi, matematiklärare Fryxellska skolan,
-                Lisa Engström, AIoch programmeringsexpert ABB Gymnasiet, Emmy
-                Henriksson, lärarassistent ABB Gymnasiet, Ahmad Alali,
-                Civilingenjörstudent MDU och lärarassistent Mälardalen
-                International School, Laith Ali Basha, Civilingenjörstudent KTH,
-                Joakim Flink AI-lärare ABB Gymnasiet, Tina Degerstedt, förälder
-                och Andreas Wiik, VD/skolchef/rektor Fryxellska skolan.
-              </p>
+            </div>
+            <div className={styles.contentWrapper}>
+
+            <div className={styles.lineContainer}> </div>
+            <div className={styles.textContainer}>
+               <p>
+                Projektgruppen som har utvecklat ABACUSCAMP är: <br />{' '}
+                <b> -Christer Norström</b>, professor och ordförande stiftelsen
+                Fryx, ordförande ABB Gymnasiet, <br /> <b>-Petra Nygård</b>,
+                rektor Mälardalen International School, <br />
+                <b>-Peter Kallioniemi</b>, matematiklärare Fryxellska skolan,{' '}
+                <br /> <b>-Lisa Engström</b>, AIoch programmeringsexpert ABB Gymnasiet,
+                <br />
+                <b>-Emmy Henriksson</b>, lärarassistent ABB Gymnasiet,
+                <br />
+                <b>-Ahmad Alali</b>, Civilingenjörstudent MDU och
+                lärarassistent Mälardalen International School,
+                <br />
+                <b>-Laith Ali Basha</b>, Civilingenjörstudent KTH,
+                <br />
+                <b>-Joakim Flink</b>, AI-lärare ABB Gymnasiet, <br />
+                <b>-Tina Degerstedt</b>, förälder  <br />{' '}
+                <b>-Andreas Wiik</b>, VD/skolchef/rektor Fryxellska skolan.
+              </p> 
+            </div>
+            </div>
+
+              
             </div>
           </div>
         </div>
@@ -47,18 +69,26 @@ const page = () => {
         <div className={styles.bottomContainer}>
           <div className={styles.bottomLeftContainer}>
             <div className={styles.bottomLeftTextContainer}>
-              <h3>BAKGRUND</h3>
+            <div className={styles.titleContainer}>
+            <h3>BAKGRUND</h3>
+            </div>
+            <div className={styles.contentWrapper}>
+
+<div className={styles.lineContainer}> </div>
+<div className={styles.textContainer}>
               <p>
                 För speciellt intresserade och särskilt begåvade elever inom
                 matematik, teknik och naturvetenskap finns idag alltför få
-                utmaningar. Elever med särskild begåvning behöver bli
+                utmaningar. <br /> Elever med särskild begåvning behöver bli
                 stimulerade och få möta likasinnade elever för att inte tappa
-                motivationen eller hamna i utanförskap. Forskning visar att
+                motivationen eller hamna i utanförskap.<br /> Forskning visar att
                 många talangfulla elever underpresterar för att passa in i den
-                svenska skolan (Sims 2021). Vi vill bemöta behoven hos dessa
+                svenska skolan (Sims 2021). <br/>Vi vill bemöta behoven hos dessa
                 elever som i brist på motivation och utmaning riskerar att bli
                 s.k. hemmasittare eller att drabbas av psykisk ohälsa.
               </p>
+              </div>
+              </div>
             </div>
           </div>
           <div className={styles.bottomRightContainer}>
