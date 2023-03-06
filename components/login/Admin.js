@@ -6,7 +6,9 @@ import styles from '../../styles/login/Admin.module.css';
 import { db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
-import { MdAddBox } from 'react-icons/md';
+// import { MdAddBox } from 'react-icons/md';
+// import { BsPlusCircle } from 'react-icons/bs'
+import { HiPlusSm } from 'react-icons/hi';
 import EventTableRow from './EventTableRow';
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -56,27 +58,39 @@ const Admin = ({ setIsLoggedIn, user }) => {
       <div className={styles.mainContainer}>
         {/* user name och logout */}
         <div className={styles.userCredContainer}>
-          <p>Du är inloggad som {user.email}</p>
+          <p>
+            Du är inloggad som <br /> {user.email}
+          </p>
           <button onClick={logOut}>Logga ut</button>
         </div>
 
-        <div className={styles.addEventBtnContainer}>
-          <button onClick={toggleCreateModalShown}>
+        {/* <div className={styles.addEventBtnContainer}> */}
+          {/* <button onClick={toggleCreateModalShown}>
             Lägg till event <MdAddBox className={styles.addIcon} />
-          </button>
-        </div>
-        <div className={styles.h2Container}>
+          </button> */}
+        {/* </div> */}
+        {/* <div className={styles.h2Container}>
           <h2>Events</h2>
-        </div>
+        </div> */}
         {isLoading ? (
           <LoadingSpinner />
         ) : (
           <>
             {/* tabell med event data */}
             <div className={styles.tableContainer}>
+              <div className={styles.rowAboveTable}>
+                <h2>Events</h2>
+                {/* <div className={styles.addEventBtnContainer}> */}
+                  <button onClick={toggleCreateModalShown} className={styles.addEventBtn} > 
+                    Skapa nytt event <HiPlusSm className={styles.addIcon} />
+                  </button>
+                {/* </div> */}
+              </div>
               <table className={styles.table}>
-                <thead className={styles.thead}>
-                  <tr>
+                  <div className={styles.thead}></div>
+                <thead >
+                  <tr >
+
                     <th className={styles.thTitle}>Titel</th>
                     <th className={styles.thText}>Text</th>
                     <th className={styles.thDate}>Datum</th>
@@ -84,6 +98,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
                     <th className={styles.thEdit}>Redigera</th>
                   </tr>
                 </thead>
+                 
                 {events.map((event) => {
                   return (
                     <tbody key={event.id} className={styles.tBody}>

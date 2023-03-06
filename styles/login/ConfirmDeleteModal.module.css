@@ -62,20 +62,20 @@
 
 .confirmBtn:hover {
   cursor: pointer;
-  background-color: rgb(251, 138, 138);
+  /* background-color: rgb(251, 138, 138); */
 }
 
 .noBtn {
   height: 2rem;
   width: 5rem;
-  background-color: grey;
-  color: white;
-  border: none;
+  background-color: white;
+  color: rgb(183, 47, 47);
+  border: 2px solid rgb(183, 47, 47);
   border-radius: 6px;
 }
 .noBtn:hover {
   cursor: pointer;
-  background-color: rgb(205, 205, 205);
+  /* background-color: rgb(205, 205, 205); */
 }
 
 @media (max-width: 499px) {

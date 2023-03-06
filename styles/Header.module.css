@@ -2,7 +2,7 @@
   height: 5rem;
   width: 100%;
   background-color: #ffff;
-  border-bottom: 3px solid black;
+  /* border-bottom: 3px solid black; */
   display: flex;
 }
 

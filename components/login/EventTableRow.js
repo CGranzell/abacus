@@ -15,11 +15,11 @@ const EventTableRow = ({ event }) => {
     <>
       <tr className={styles.tr}>
         <td className={styles.tdTitle}>{event.title.substring(0, 20)}</td>
-        <td className={styles.tdTitle}>{event.text.substring(0, 30)}...</td>
-        <td className={styles.tdTitle}>
+        <td className={styles.tdText}>{event.text.substring(0, 30)}...</td>
+        <td >
           <p>{event.date}</p>
         </td>
-        <td className={styles.tdTitle}> {event.link.substring(0, 20)}</td>
+        <td > {event.link.substring(0, 20)}</td>
         <td className={styles.tdBtns}>
           <div className={styles.wrapperBtns}>
             <MdEdit
