@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import styles from '../../styles/login/ConfirmDeleteModal.module.css';
-// import { FaWindowClose } from 'react-icons/fa';
 import { GrClose } from 'react-icons/gr';
 import { doc, deleteDoc } from 'firebase/firestore';
 import { db } from '@/firebase';
@@ -50,7 +49,6 @@ const ConfirmDeleteModal = ({ children, shown, close, event }) => {
           </form>
         </div>
       </div>
-
       {children}
     </div>
   ) : null;

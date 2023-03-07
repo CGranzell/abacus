@@ -1,7 +1,6 @@
 'use client';
 import styles from '../styles/EventModal.module.css';
 import Link from 'next/link';
-// import { FaWindowClose } from 'react-icons/fa';
 import { GrClose } from 'react-icons/gr';
 import { ImCalendar } from 'react-icons/im';
 import { MdOutlineLocationOn } from 'react-icons/md';
@@ -69,7 +68,6 @@ const EventModal = ({ children, shown, close, event }) => {
         <div className={styles.rightContainer}>
           <div className={styles.rightTopContainer}>
             <p>{event.title}</p>
-            {/* <FaWindowClose className={styles.closeBtn} onClick={close} /> */}
             <GrClose className={styles.closeBtn} onClick={close} />
           </div>
           <div className={styles.rightMidContainer}>
@@ -77,38 +75,13 @@ const EventModal = ({ children, shown, close, event }) => {
           </div>
           <div className={styles.rightBottomContainer}>
             <div className={styles.linkToEventContainer}>
-              <Link
-              
-              href={`https://${event.link}`}
-              >
+              <Link href={`https://${event.link}`}>
                 Anmälan till {event.title} {'>'}
               </Link>
             </div>
           </div>
         </div>
-
-        {/* <div className={styles.dateContainer}> */}
-        {/* Månad och Dag*/}
-        {/* <div className={styles.monthDateContainer}>
-            <p>{event.date}</p>
-          </div> */}
-        {/* År */}
-        {/* <div className={styles.yearContainer}>
-            <p>{event.date.slice(10)}</p>
-          </div> */}
       </div>
-      {/* <div className={styles.textContainer}> */}
-      {/* Brödtext */}
-      {/* <div className={styles.pContainer}>
-            <p>{event.text}</p>
-          </div>
-        </div> */}
-      {/* <div className={styles.linkContainer}>
-          <p>Anmäl dig här</p>
-          <Link href={event.link}>{event.link}</Link>
-        </div> */}
-      {/* </div> */}
-      {/* event data slut */}
       {children}
     </div>
   ) : null;

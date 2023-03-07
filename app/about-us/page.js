@@ -1,11 +1,8 @@
 import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
-// import math from '../../public/images/math.jpg';
 import math from '../../public/images/elev-grey.png';
-// import omOssTop from '../../public/images/lecture.jpg';
 import omOssTop from '../../public/images/about-us-grey.png';
-// import omOssBottom from '../../public/images//om-oss-bottom.jpg';
 import omOssBottom from '../../public/images/linjal-grey.png';
 
 const page = () => {

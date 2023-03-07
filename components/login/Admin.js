@@ -6,8 +6,6 @@ import styles from '../../styles/login/Admin.module.css';
 import { db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import CreateEventModal from './CreateEventModal';
-// import { MdAddBox } from 'react-icons/md';
-// import { BsPlusCircle } from 'react-icons/bs'
 import { HiPlusSm } from 'react-icons/hi';
 import EventTableRow from './EventTableRow';
 import LoadingSpinner from '../LoadingSpinner';
@@ -36,10 +34,8 @@ const Admin = ({ setIsLoggedIn, user }) => {
 
   // Loggar ut
   const logOut = async () => {
-    // setIsLoading(true);
     await signOut(auth);
     setIsLoggedIn(false);
-    // setIsLoading(false);
   };
 
   // Modal För Att skapa Event
@@ -64,14 +60,6 @@ const Admin = ({ setIsLoggedIn, user }) => {
           <button onClick={logOut}>Logga ut</button>
         </div>
 
-        {/* <div className={styles.addEventBtnContainer}> */}
-          {/* <button onClick={toggleCreateModalShown}>
-            Lägg till event <MdAddBox className={styles.addIcon} />
-          </button> */}
-        {/* </div> */}
-        {/* <div className={styles.h2Container}>
-          <h2>Events</h2>
-        </div> */}
         {isLoading ? (
           <LoadingSpinner />
         ) : (
@@ -80,11 +68,9 @@ const Admin = ({ setIsLoggedIn, user }) => {
             <div className={styles.tableContainer}>
               <div className={styles.rowAboveTable}>
                 <h2>Events</h2>
-                {/* <div className={styles.addEventBtnContainer}> */}
                   <button onClick={toggleCreateModalShown} className={styles.addEventBtn} > 
                     Skapa nytt event <HiPlusSm className={styles.addIcon} />
                   </button>
-                {/* </div> */}
               </div>
               <table className={styles.table}>
                   <div className={styles.thead}></div>

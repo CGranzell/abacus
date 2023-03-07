@@ -17,7 +17,6 @@ const LoginForm = ({ monitorAuthState }) => {
 
   // Logga in med email och lösenord
   const loginEmailPassword = async () => {
-   
     const loginEmail = email;
     const loginPassword = password;
 
@@ -29,7 +28,6 @@ const LoginForm = ({ monitorAuthState }) => {
       );
       console.log(userCredential.user);
       setFormIsValid(true);
-      
     } catch (error) {
       console.log(error);
       showLoginError(error);
@@ -55,7 +53,7 @@ const LoginForm = ({ monitorAuthState }) => {
   };
 
   return (
-    <form className={styles.formContainer} onSubmit={onSubmit} >
+    <form className={styles.formContainer} onSubmit={onSubmit}>
       <h1>Logga In</h1>
       {!formIsValid && errorMessage}
       <div className={styles.inputContainer}>
@@ -77,7 +75,7 @@ const LoginForm = ({ monitorAuthState }) => {
         />
       </div>
       <div className={styles.btnContainer}>
-        <button type="submit" >Logga in</button>
+        <button type="submit">Logga in</button>
       </div>
     </form>
   );

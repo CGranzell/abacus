@@ -7,7 +7,6 @@ const MENU_LIST = [
   { text: 'Logga in', href: '/login-page' },
 ];
 
-
 const NavItemBurger = ({ setIsOpen }) => {
   return (
     <>

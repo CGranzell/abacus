@@ -21,27 +21,16 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
     const getEvents = async () => {
       const data = await getDocs(eventsCollectionRef);
       console.log(data);
-      
+
       setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getEvents();
-    // setIsLoading(false);
   }, []);
 
-  
-  // const dates = [
-  //   1, 2, 5, 9, 2, 5, 3
-  // ]
   // Sorterar events efter datum
-  const sortedEvents = events.sort((a, b) => new Date(b.date) - new Date(a.date)).reverse()
-  // const sortedEvents = events.sort(function (date1, date2) {
-  //   return date1 - date2;
-  // });
-  
-  console.log(sortedEvents);
-  
-
-  // console.log(sortedEvents);
+  const sortedEvents = events
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .reverse();
 
   return (
     <div className={styles.mainContainer} ref={ref}>

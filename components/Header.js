@@ -2,8 +2,7 @@
 import React, { useState, useRef } from 'react';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
-// import logo from '../public/images/logga.png';
-import logo from '../public/Abacus Camp-logga.svg'
+import logo from '../public/Abacus Camp-logga.svg';
 import Link from 'next/link';
 import { BsPersonCircle } from 'react-icons/bs';
 import useOutsideClick from '@/hooks/useOutsideClick';
@@ -39,13 +38,13 @@ const Header = () => {
         </div>
       </div>
       {/* Hamburger */}
-    
+
       <div className={clicked} onClick={handleBurger}>
         <div></div>
         <div></div>
         <div></div>
       </div>
-        {/* Hamburger länkar */}
+      {/* Hamburger länkar */}
       {isOpen && (
         <div className={styles.burgerMenu} ref={ref}>
           <NavItemBurger setIsOpen={setIsOpen} />

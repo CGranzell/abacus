@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import styles from '../../styles/upComingEvents/EventCard.module.css';
-import { FaLongArrowAltRight } from 'react-icons/fa';
-import { ImCalendar } from 'react-icons/im'
+import { ImCalendar } from 'react-icons/im';
 import EventModal from '../EventModal';
 
 const EventCard = ({ event }) => {
@@ -20,9 +19,9 @@ const EventCard = ({ event }) => {
       <div className={styles.mainContainer} onClick={toggleModal}>
         {/* Datum Container*/}
         <div className={styles.dateContainer}>
-        <div className={styles.iconContainer}>
-          <ImCalendar />
-        </div>
+          <div className={styles.iconContainer}>
+            <ImCalendar />
+          </div>
           {/* Månad och Dag*/}
           <div className={styles.monthDateContainer}>
             <p>{event.date.substring(5, 10)}</p>
@@ -44,8 +43,9 @@ const EventCard = ({ event }) => {
           </div>
           {/* Läs mer */}
           <div className={styles.readMoreContainer}>
-            <button>Läs mer om {event.title} {">"}</button> 
-            {/* <FaLongArrowAltRight className={styles.arrow} /> */}
+            <button>
+              Läs mer om {event.title} {'>'}
+            </button>
           </div>
         </div>
       </div>

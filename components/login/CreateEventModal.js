@@ -70,7 +70,6 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
                 <p className={styles.errorMessage}> * Obligatorisk </p>
               )}
             </div>
-
             <input
               className={styles.input}
               type="text"
@@ -147,7 +146,6 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
                   }}
                 />
               </div>
-
               <div className={styles.createBtnContainer}>
                 <div className={styles.btnWrapper}>
                   <button
@@ -167,7 +165,6 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
           )}
         </form>
       </div>
-
       {children}
     </div>
   ) : null;

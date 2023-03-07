@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* border: 1px solid black; */
 }
 .userCredContainer button{
   height: 2rem;
@@ -24,7 +23,6 @@
 .addEventBtnContainer{
   height: 5rem;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +30,6 @@
 .addEventBtnContainer button{
   height: 5rem;
   width: 40%;
-  /* border: 1px solid black; */
   border-radius: 6px;
  cursor: pointer;
 }
@@ -40,7 +37,6 @@
 .h2Container{
   height: 5rem;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
