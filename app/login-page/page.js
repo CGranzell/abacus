@@ -44,7 +44,13 @@ const page = () => {
       {isLoading ? (
         <LoadingSpinner />
       ) : (
+        <>
+        <div className={styles.textContainer}>
+
+        <h1>Här kan du som behörig personal<br/> logga in  för att Skapa / Redigera event</h1>
+        </div>
         <LoginForm monitorAuthState={monitorAuthState} />
+        </>
       )}
     </div>
   );

@@ -59,6 +59,7 @@ const Header = () => {
       <div className={styles.loginContainer}>
         <Link href={'/login-page'}>
           <BsPersonCircle className={styles.icon} />
+          <p>Admin</p>
         </Link>
       </div>
     </nav>

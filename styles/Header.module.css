@@ -60,13 +60,22 @@
   height: 100%;
   width: 10%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+}
+.loginContainer a {
+  text-align: center;
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: black;
 }
 
-.loginContainer a {
+
+/* .loginContainer a {
   color: black;
-}
+} */
 
 .icon {
   height: 2.5rem;
