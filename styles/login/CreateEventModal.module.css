@@ -138,4 +138,8 @@
   .timeText {
     margin-left: 10%;
   }
+  .errorMessage {
+    font-size: 0.3rem;
+    color: red;
+  }
 }
