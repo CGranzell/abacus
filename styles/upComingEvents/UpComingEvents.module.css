@@ -1,9 +1,8 @@
 .mainContainer {
-  /* margin-top: 5rem; */
   min-height: 30rem;
   height: auto;
   width: 100%;
-  background-color: #D5D5D5;
+  background-color: #d5d5d5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,12 +14,9 @@
   height: 4rem;
   width: 80%;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   color: #858585;
-  /* border: 1px solid black; */
 }
-.headerContainer h1{
+.headerContainer h1 {
   font-weight: 100;
 }
 
@@ -50,9 +46,7 @@
 /* Media Queries */
 @media (max-width: 499px) {
   .mainContainer {
-    
     height: auto;
-    
   }
   .cardContainer {
     grid-template-columns: repeat(1, 1fr);

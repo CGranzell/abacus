@@ -1,11 +1,9 @@
 .mainContainer {
-  /* min-height: 100vh; */
-
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 .userCredContainer {
@@ -15,9 +13,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  /* border: 1px solid black; */
   margin-bottom: 4rem;
-  
 }
 .userCredContainer p {
   margin-top: 1rem;
@@ -29,19 +25,14 @@
   width: 8rem;
   cursor: pointer;
   background-color: white;
-  border: 2px solid #388E57;
-  color: #388E57;
+  border: 2px solid #388e57;
+  color: #388e57;
   border-radius: 4px;
-
 }
 
 .addEventBtnContainer {
   height: 5rem;
   width: 100%;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-  
 }
 
 .addEventBtn {
@@ -49,7 +40,7 @@
   width: 20%;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #388E57;
+  background-color: #388e57;
   color: white;
   border: none;
   font-size: 1rem;
@@ -57,53 +48,28 @@
   justify-content: space-evenly;
   align-items: center;
 }
-/* .addEventBtnContainer button {
-  height: 3rem;
-  width: 20%;
-  border-radius: 6px;
-  cursor: pointer;
-  background-color: #388E57;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-} */
-
-
 
 .addIcon {
   background-color: white;
   border-radius: 50%;
-  color: #388E57;
+  color: #388e57;
   border: none;
   font-size: 2rem;
   transition: 0.3 ease-in-out;
 }
-.addIcon:hover  {
+.addIcon:hover {
   transform: scale(1.1);
 }
-
-/* .h2Container {
-  height: 5rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .tableContainer {
   height: auto;
   width: 80%;
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   margin-bottom: 5rem;
 }
 
 .rowAboveTable {
   height: 5rem;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,49 +77,41 @@
   background-color: white;
 }
 
-
 /* Tabell */
 .table {
   width: 100%;
-  /* border: 1px solid #DDDDDD; */
-  background-color: #D5D5D5;
+  background-color: #d5d5d5;
   border-collapse: collapse;
 }
-.thead{
+.thead {
   width: 100%;
   background-color: #ff0000;
-  
 }
 
 /* Tabell head */
 .thTitle {
   width: 20%;
- text-align: left;
- padding: 0 2%;
-  /* border: 1px solid black; */
+  text-align: left;
+  padding: 0 2%;
 }
 
 .thText {
   width: 30%;
   text-align: left;
-  /* border: 1px solid black; */
 }
 
 .thDate {
   width: 15%;
-  /* border: 1px solid black; */
   text-align: left;
 }
 
 .thLink {
   width: 15%;
-  /* border: 1px solid black; */
   text-align: left;
 }
 
 .thEdit {
   width: 20%;
-  /* border: 1px solid black; */
 }
 
 /* Tabell body */
@@ -161,9 +119,6 @@
 .tBody {
   background-color: white;
   height: 4rem;
-  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    border: 1px solid black; */
 }
 
 .wrapperBtns {
@@ -194,7 +149,7 @@
   .userCredContainer p {
     font-size: 0.7rem;
   }
-  
+
   .userCredContainer button {
     height: 1.5rem;
     width: 8rem;
@@ -216,13 +171,12 @@
     width: 50%;
     border-radius: 2px;
   }
-  
-  .thTitle, 
+
+  .thTitle,
   .thText,
-  .thDate, 
-  .thLink, 
+  .thDate,
+  .thLink,
   .thEdit {
     font-size: 0.5rem;
   }
-  
 }

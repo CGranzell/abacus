@@ -9,7 +9,6 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
-  /* border: 1px solid black; */
 }
 
 .modalContent {
@@ -17,9 +16,8 @@
   height: 70%;
   background-color: white;
   padding: 25px;
-  border: 1px solid #8D8D8D;
+  border: 1px solid #8d8d8d;
   display: flex;
-  
 }
 
 .closeBtn {
@@ -27,26 +25,23 @@
   background: none;
   border: none;
   transition: 0.3 ease-in-out;
-  /* border: 1px solid black; */
   font-size: 1.8rem;
 }
 
 .closeBtn:hover {
   cursor: pointer;
   transform: scale(1.2);
-  /* border: 1px solid black; */
 }
 
 .icon {
-   background-color: white;
-   color: #DC3926;
-  }
+  background-color: white;
+  color: #dc3926;
+}
 
 /* left container */
 .leftContainer {
   width: 39.5%;
   height: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +50,6 @@
 .leftWrapper {
   height: 50%;
   width: 50%;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
 }
@@ -63,23 +57,20 @@
 .leftTopContainer {
   height: 33.3%;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
 }
 
 .leftTopIcon {
   height: 100%;
   width: 20%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.leftTopText{
+.leftTopText {
   height: 100%;
   width: 80%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,84 +79,71 @@
 .leftMidContainer {
   height: 33.3%;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
 }
 
 .midIcon {
   height: 100%;
   width: 20%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.midText{
+.midText {
   height: 100%;
   width: 80%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .leftBottomContainer {
   height: 33.3%;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
 }
-
-
 
 /* mid container */
 .midContainer {
   width: 1%;
   height: 100%;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
 }
-.redLine{
+.redLine {
   height: 50%;
   width: 100%;
-  background-color: #DC3926;
+  background-color: #dc3926;
 }
 
 /* right container */
 .rightContainer {
   width: 59.5%;
   height: 100%;
-  /* border: 1px solid black; */
 }
 
 .rightTopContainer {
   width: 100%;
   height: 25%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   padding: 0 4%;
   align-items: center;
 }
-.rightTopContainer p{
-    font-size: 1.5rem;
+.rightTopContainer p {
+  font-size: 1.5rem;
 }
 .rightMidContainer {
   width: 100%;
   height: 50%;
-  /* border: 1px solid black; */
   overflow-y: scroll;
   padding: 0 4%;
 }
 
-
 .rightBottomContainer {
   width: 100%;
   height: 25%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -177,11 +155,11 @@
   height: 3rem;
 }
 
-.linkToEventContainer a{
+.linkToEventContainer a {
   width: 100%;
   height: 100%;
-  background-color: #388E57;
-  color: #EDF1EC;
+  background-color: #388e57;
+  color: #edf1ec;
   text-decoration: none;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -191,13 +169,11 @@
   align-items: center;
 }
 .linkToEventContainer a:hover {
-  background-color: #9ECCAF;
+  background-color: #9eccaf;
   color: #323333;
   cursor: pointer;
   font-size: 1rem;
 }
-
-
 
 /* Media Queries */
 @media (max-width: 699px) {
@@ -210,17 +186,11 @@
   .leftContainer {
     width: 100%;
     height: 30%;
-    /* border: 1px solid black; */
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* align-items: center; */
-    /* justify-content: center; */
   }
 
   .leftWrapper {
     height: 50%;
     width: 80%;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
   }
@@ -228,7 +198,6 @@
   .midContainer {
     width: 100%;
     height: 1%;
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
   }
@@ -236,7 +205,5 @@
   .rightContainer {
     width: 100%;
     height: 70%;
-    /* border: 1px solid black; */
   }
 }
-

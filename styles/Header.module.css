@@ -2,13 +2,11 @@
   height: 5rem;
   width: 100%;
   background-color: #ffff;
-  /* border-bottom: 3px solid black; */
   display: flex;
 }
 
 /* logo */
 .logoContainer {
-  /* border: 1px solid black; */
   height: 100%;
   width: 50%;
   display: flex;
@@ -17,14 +15,12 @@
 }
 
 .logoWrapper {
-  /* border: 1px solid black; */
   height: 70px;
   width: 200px;
   position: relative;
 }
 
 .logo {
-  /* border: 1px solid black; */
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -63,19 +59,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .loginContainer a {
   text-align: center;
-    font-size: 0.6rem;
-    text-decoration: none;
-    color: black;
-}
-
-
-/* .loginContainer a {
+  font-size: 0.6rem;
+  text-decoration: none;
   color: black;
-} */
+}
 
 .icon {
   height: 2.5rem;

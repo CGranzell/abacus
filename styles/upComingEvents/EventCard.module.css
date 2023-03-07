@@ -107,9 +107,7 @@
 
 /* Media Queries */
 @media (max-width: 800px) {
-
   .mainContainer {
-    
     margin-bottom: 2rem;
   }
 

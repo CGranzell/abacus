@@ -5,14 +5,12 @@
   display: flex;
   justify-content: center;
   border-top: 2px solid black;
-  /* border: 1px solid black; */
 }
 
 /* vänster grid */
 .leftGridContainer {
   height: 100%;
   width: 40%;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -23,24 +21,19 @@
 .textContainer {
   height: 50%;
   width: 50%;
-  /* border: 1px solid black; */
 }
 .textWrapper {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  
 }
 
 .textWrapper h3 {
   font-size: 1rem;
-  /* border: 1px solid black; */
 }
 .textWrapper p {
   font-size: 0.6rem;
-  /* border: 1px solid black; */
 }
 
 /* nedre ruta */
@@ -51,30 +44,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* border: 1px solid black; */
 }
 
-.konceptTextContainer {
-  /* margin-top: 1rem; */
-  /* border: 1px solid black; */
-}
 .konceptTextContainer p {
   font-size: 0.6rem;
-  /* border: 1px solid black; */
 }
 
 .imgLogoContainer {
   height: 100%;
   width: 100%;
-  /* border: 1px solid black; */
   display: flex;
 }
 
 .imgWrapper {
   height: 50%;
   width: 33.3%;
-  /* border: 1px solid black; */
 }
 
 .logo {
@@ -82,14 +66,12 @@
   width: 100%;
   color: rgb(0, 0, 0);
   object-fit: contain;
-  /* border: 1px solid black; */
 }
 
 /* Mitten grid */
 .midGridContainer {
   height: 100%;
   width: 20%;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +83,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
 }
 
 .links {
@@ -110,15 +91,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
-  /* border: 1px solid black; */
 }
 
 .links a {
   text-decoration: none;
   color: black;
   transition: 0.3s ease-in-out;
-  /* border: 1px solid black; */
   font-size: 0.8rem;
 }
 
@@ -131,7 +109,6 @@
 .rightGridContainer {
   height: 100%;
   width: 40%;
-  /* border: 1px solid black; */
 }
 
 .socialWrapper {
@@ -140,7 +117,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid black; */
 }
 
 .textSocial {
@@ -148,11 +124,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
 }
 .textSocial h3 {
   font-size: 0.8rem;
-  /* border: 1px solid black; */
 }
 
 .iconsSocial {
@@ -161,7 +135,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px solid black; */
 }
 
 .icon {
@@ -170,7 +143,6 @@
   height: 1.5rem;
   color: black;
   transition: 0.3s ease-in-out;
-  /* border: 1px solid black; */
 }
 
 .icon:hover {
@@ -219,8 +191,8 @@
     width: 40%;
   }
   .imgLogoContainer {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .midGridContainer {
@@ -251,7 +223,5 @@
 
   .textSocial h3 {
     font-size: 0.6rem;
-    
   }
-  
 }

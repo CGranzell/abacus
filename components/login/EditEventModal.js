@@ -1,14 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import styles from '../../styles/login/EditEventModal.module.css';
-// import { FaWindowClose } from 'react-icons/fa';
 import { GrClose } from 'react-icons/gr';
 import { updateDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
 const EditEventModal = ({ children, shown, close, event }) => {
-  const [formIsValid, setFormIsValid] = useState(false);
+  // validering
+  const [isValid, setIsValid] = useState(false);
 
   // Spinner
   const [isLoading, setIsLoading] = useState(false);
@@ -22,25 +22,24 @@ const EditEventModal = ({ children, shown, close, event }) => {
   const [newLocation, setNewLocation] = useState(event.location);
 
   const updateEvent = async (id) => {
-    setIsLoading(true);
     if (newTitle === '' || newText === '' || newDate === '') {
-      setFormIsValid(false);
+      setIsValid(false);
     } else {
-      setFormIsValid(true);
+      setIsLoading(true);
       const eventDoc = doc(db, 'events', id);
       const newFields = {
         title: newTitle,
-          text: newText,
-          date: newDate,
-          time: newTime,
-          link: newLink,
-          location: newLocation,
+        text: newText,
+        date: newDate,
+        time: newTime,
+        link: newLink,
+        location: newLocation,
       };
-      
+
       try {
-        
         await updateDoc(eventDoc, newFields);
         window.location.reload();
+        setIsValid(true);
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -68,7 +67,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
           className={styles.mainContainer}
           onSubmit={(e) => {
             e.preventDefault();
-            
+
             updateEvent(
               event.id,
               event.title,
@@ -76,110 +75,117 @@ const EditEventModal = ({ children, shown, close, event }) => {
               event.date,
               event.time,
               event.link,
-              event.location,
+              event.location
             );
           }}
         >
-        {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <>
-        <div className={styles.titleContainer}>
-        <div className={styles.formTitleContainer}>
-            {/* <div className={styles.errorContainer}> */}
-              <p>Titel</p>
-              </div>
-              {/* {<p className={styles.errorMessage}> * Obligatoriskt fält </p>} */}
-            {/* </div> */}
-            <input className={styles.input}
-              type="text"
-              value={newTitle}
-              onChange={(e) => {
-                setNewTitle(e.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.textContainer}>
-          <div className={styles.formTitleContainer}>
-
-              <p>Text</p>
-          </div>
-            {/* <div className={styles.errorContainer}> */}
-              {/* {<p className={styles.errorMessage}> * Obligatoriskt fält </p>} */}
-            {/* </div> */}
-            <textarea
-            className={styles.input}
-              type="text"
-              value={newText}
-              onChange={(e) => {
-                setNewText(e.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.dateContainer}>
-          <div className={styles.formTitleContainer}>
-                  <p>Datum</p>
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <>
+              <div className={styles.titleContainer}>
+                <div className={styles.formTitleContainer}>
+                  <p>Titel</p>
+                  {!isValid && (
+                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                  )}
                 </div>
-            {/* <div className={styles.errorContainer}>
-              {<p className={styles.errorMessage}> * Obligatoriskt fält </p>}
-            </div> */}
-            <input className={styles.dateInput}
-              type="date"
-              value={newDate}
-              onChange={(e) => {
-                setNewDate(e.target.value);
-              }}
-            />
-          <div className={styles.formTitleContainer}>
-          <p className={styles.timeText}>Tid</p>
-          </div>
-            <input className={styles.dateInput}
-              type="time"
-              value={newTime}
-              onChange={(e) => {
-                setNewTime(e.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.locationContainer}>
-          <div className={styles.formTitleContainer}>
+                <input
+                  className={styles.input}
+                  type="text"
+                  value={newTitle}
+                  onChange={(e) => {
+                    setNewTitle(e.target.value);
+                  }}
+                />
+              </div>
+              <div className={styles.textContainer}>
+                <div className={styles.formTitleContainer}>
+                  <p>Text</p>
+                  {!isValid && (
+                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                  )}
+                </div>
+
+                <textarea
+                  className={styles.input}
+                  type="text"
+                  value={newText}
+                  onChange={(e) => {
+                    setNewText(e.target.value);
+                  }}
+                />
+              </div>
+              <div className={styles.dateContainer}>
+                <div className={styles.formTitleContainer}>
+                  <p>Datum</p>
+                  {!isValid && (
+                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                  )}
+                </div>
+                <input
+                  className={styles.dateInput}
+                  type="date"
+                  value={newDate}
+                  onChange={(e) => {
+                    setNewDate(e.target.value);
+                  }}
+                />
+                <div className={styles.formTitleContainer}>
+                  <p className={styles.timeText}>Tid</p>
+                </div>
+                <input
+                  className={styles.dateInput}
+                  type="time"
+                  value={newTime}
+                  onChange={(e) => {
+                    setNewTime(e.target.value);
+                  }}
+                />
+              </div>
+              <div className={styles.locationContainer}>
+                <div className={styles.formTitleContainer}>
                   <p>Plats</p>
                 </div>
-            <input className={styles.input}
-              type="text"
-              value={newLocation}
-              onChange={(e) => {
-                setNewLocation(e.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.linkContainer}>
-          <div className={styles.formTitleContainer}>
+                <input
+                  className={styles.input}
+                  type="text"
+                  value={newLocation}
+                  onChange={(e) => {
+                    setNewLocation(e.target.value);
+                  }}
+                />
+              </div>
+              <div className={styles.linkContainer}>
+                <div className={styles.formTitleContainer}>
                   <p>Länk</p>
                 </div>
-            <input className={styles.input}
-              type="text"
-              value={newLink}
-              onChange={(e) => {
-                setNewLink(e.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.createBtnContainer}>
-          <div className={styles.btnWrapper}>
-          <button className={styles.abortBtn}
-                  onClick={() => {
-                    close();
+                <input
+                  className={styles.input}
+                  type="text"
+                  value={newLink}
+                  onChange={(e) => {
+                    setNewLink(e.target.value);
                   }}
-                >
-                  Avbryt
-                </button>
-            <button className={styles.saveBtn} type="submit">Spara</button>
-            </div>
-          </div>
-          </>
-      )}
-          
+                />
+              </div>
+              <div className={styles.createBtnContainer}>
+                <div className={styles.btnWrapper}>
+                  <button
+                    className={styles.abortBtn}
+                    onClick={() => {
+                      close();
+                    }}
+                  >
+                    Avbryt
+                  </button>
+                  <button className={styles.saveBtn} type="submit">
+                    Spara
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </form>
       </div>
 

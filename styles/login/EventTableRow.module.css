@@ -6,7 +6,6 @@
 .wrapperBtns {
   display: flex;
   justify-content: center;
- 
 }
 
 .iconEdit {
@@ -30,9 +29,8 @@
 }
 
 @media (max-width: 699px) {
-  .tr  {
+  .tr {
     font-size: 0.6rem;
-   
   }
   .tdText {
     padding: 0 4%;
@@ -44,17 +42,4 @@
   .iconDelete {
     font-size: 1rem;
   }
-}
-
-@media (max-width: 399px) {
-  /* .tr {
-    font-size: 0.4rem;
-  }
-
-  .iconEdit {
-    font-size: 0.7rem;
-  }
-  .iconDelete {
-    font-size: 0.7rem;
-  } */
 }

@@ -39,7 +39,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  /* border: 1px solid black; */
   font-size: 0.8rem;
 }
 
@@ -47,7 +46,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* border: 1px solid black; */
 }
 
 .confirmBtn {
@@ -62,7 +60,6 @@
 
 .confirmBtn:hover {
   cursor: pointer;
-  /* background-color: rgb(251, 138, 138); */
 }
 
 .noBtn {
@@ -75,14 +72,12 @@
 }
 .noBtn:hover {
   cursor: pointer;
-  /* background-color: rgb(205, 205, 205); */
 }
 
 @media (max-width: 499px) {
   .modalContent {
     width: 70%;
     height: 20%;
-    
   }
 
   .confirmContainer p {
