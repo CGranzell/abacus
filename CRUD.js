@@ -52,3 +52,5 @@ const updateEvent = async (id, title) => {
   <input type="text" placeholder='text' onChange={(e) => {setNewTitle(e.target.value)}}/>
   <button onClick={createEvent}>Skapa Event</button>
   </div>
+
+

@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const MENU_LIST = [
   { text: 'Hem', href: '/' },
-  { text: 'Om Oss', href: '/about-us' },
+  { text: 'Om oss', href: '/about-us' },
   { text: 'Kontakt', href: '/contact' },
-  { text: 'Logga in', href: '/login-page' },
+  { text: 'Admin', href: '/login-page' },
 ];
 
 const NavItemBurger = ({ setIsOpen }) => {

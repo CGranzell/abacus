@@ -34,6 +34,8 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
 
   return (
     <div className={styles.mainContainer} ref={ref}>
+    <div className={styles.mainWrapper}>
+
       <div className={styles.headerContainer}>
         <h1>Kommande events</h1>
       </div>
@@ -47,6 +49,7 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
           })}
         </div>
       )}
+    </div>
     </div>
   );
 });

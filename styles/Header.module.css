@@ -3,21 +3,32 @@
   width: 100%;
   background-color: #ffff;
   display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
 }
+
+.mainWrapper{
+    width: 65%;
+    display: flex;
+    /* border: 1px solid red; */
+}
+
 
 /* logo */
 .logoContainer {
   height: 100%;
   width: 50%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 .logoWrapper {
   height: 70px;
   width: 200px;
   position: relative;
+  /* border: 1px solid black; */
 }
 
 .logo {
@@ -25,6 +36,8 @@
   width: 100%;
   object-fit: contain;
   transition: 0.3s ease-in-out;
+  position: absolute;
+  left: -2.3rem;
 }
 
 .logo:hover {
@@ -34,10 +47,11 @@
 /* page links */
 .pageLinksContainer {
   height: 100%;
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 .pageLinksContainer a {
@@ -56,9 +70,10 @@
   height: 100%;
   width: 10%;
   display: flex;
-  flex-direction: column;
+ flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; 
+  /* border: 1px solid black; */
 }
 .loginContainer a {
   text-align: center;
@@ -68,9 +83,12 @@
 }
 
 .icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   transition: 0.3s ease-in-out;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .icon:hover {
@@ -83,7 +101,7 @@
 .hamburgerClosed {
   position: absolute;
   top: 1rem;
-  right: 3rem;
+  right: 6rem;
   height: 30px;
   width: 30px;
   display: flex;
@@ -180,23 +198,60 @@
   }
 }
 
-/* Media Queries */
-@media (max-width: 699px) {
-  /* logo */
-  .logoContainer {
-    width: 40%;
-    margin-left: 50px;
-  }
 
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1200px) {
+
+}
+/* Tablet */
+@media (max-width: 800px) {
   .pageLinksContainer,
   .loginContainer {
     display: none;
   }
+  
+  .mainWrapper{
+    width: 75%;
+    /* display: flex;
+    border: 1px solid red; */
 }
 
-@media (min-width: 699px) {
+}
+
+@media (min-width: 800px) {
   .hamburgerOpen,
   .hamburgerClosed {
     display: none;
   }
 }
+
+
+/* Mobile */
+@media (max-width: 500px) {
+  .mainWrapper{
+    width: 90%;
+    /* display: flex;
+    border: 1px solid red; */
+}
+  .logo {
+    /* height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+    position: absolute; */
+    left: 0rem;
+  }
+
+  .hamburgerClosed {
+    /* position: absolute;
+    top: 1rem; */
+    right: 1.4rem;
+    /* height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+  }
+}
+

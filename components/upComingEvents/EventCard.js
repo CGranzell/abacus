@@ -7,6 +7,11 @@ import EventModal from '../EventModal';
 const EventCard = ({ event }) => {
   const [modalShown, toggleModal] = useState(false);
 
+  const date = new Date(event.date); // 2009-11-10
+  const month = date.toLocaleString('default', { month: 'short' });
+  const day = event.date.slice(8, 10);
+  const year = event.date.slice(0, 4);
+
   return (
     <>
       <EventModal
@@ -24,11 +29,14 @@ const EventCard = ({ event }) => {
           </div>
           {/* Månad och Dag*/}
           <div className={styles.monthDateContainer}>
-            <p>{event.date.substring(5, 10)}</p>
+            {/* <p>{event.date.substring(5, 10)}</p> */}
+            
+            <p>{day}</p>
+            <p> {month}</p>
           </div>
           {/* År */}
           <div className={styles.yearContainer}>
-            <p>{event.date.substring(0, 4)}</p>
+            <p>{year}</p>
           </div>
         </div>
         {/* Text Container*/}

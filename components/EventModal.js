@@ -51,10 +51,10 @@ const EventModal = ({ children, shown, close, event }) => {
               </div>
             </div>
             <div className={styles.leftBottomContainer}>
-              <div className={styles.midIcon}>
+              <div className={styles.bottomIcon}>
                 <BiTimeFive className={styles.icon} size="20px" />
               </div>
-              <div className={styles.midText}>
+              <div className={styles.bottomText}>
                 <p>{event.time}</p>
               </div>
             </div>

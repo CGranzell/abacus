@@ -4,7 +4,8 @@ import styles from '../styles/Header.module.css';
 import Image from 'next/image';
 import logo from '../public/Abacus Camp-logga.svg';
 import Link from 'next/link';
-import { BsPersonCircle } from 'react-icons/bs';
+// import { BsPersonCircle } from 'react-icons/bs';
+import { BsPerson } from 'react-icons/bs';
 import useOutsideClick from '@/hooks/useOutsideClick';
 import NavItem from './NavItem';
 import NavItemBurger from './NavItemBurger';
@@ -30,7 +31,8 @@ const Header = () => {
 
   return (
     <nav className={styles.mainContainer}>
-      <div className={styles.logoContainer}>
+    <div className={styles.mainWrapper}>
+    <div className={styles.logoContainer}>
         <div className={styles.logoWrapper}>
           <Link href={'/'}>
             <Image src={logo} className={styles.logo} alt="logo" priority />
@@ -57,10 +59,12 @@ const Header = () => {
       {/* Logga in */}
       <div className={styles.loginContainer}>
         <Link href={'/login-page'}>
-          <BsPersonCircle className={styles.icon} />
+          <BsPerson className={styles.icon} />
           <p>Admin</p>
         </Link>
       </div>
+    </div>
+    
     </nav>
   );
 };

@@ -10,16 +10,20 @@ import {
   FaInstagramSquare,
   FaLinkedin,
 } from 'react-icons/fa';
+import FooterLinksMobile from './FooterLinksMobile';
 
 const Footer = () => {
   return (
     <div className={styles.mainContainer}>
+    <div className={styles.mainWrapper}>
+
+    
       {/* Vänster grid */}
       <div className={styles.leftGridContainer}>
         <div className={styles.textContainer}>
           <div className={styles.textWrapper}>
             <h3>Abacus Camp</h3>
-            <p>Avancerad matematik och programmering</p>
+            <p>Avancerad matematik och <br/> programmering</p>
           </div>
         </div>
         <div className={styles.imgContainer}>
@@ -27,6 +31,8 @@ const Footer = () => {
             <p>Koncept och idé i sammarbete med</p>
           </div>
           <div className={styles.imgLogoContainer}>
+          <div className={styles.imgWrapperContainer}>
+
             <div className={styles.imgWrapper}>
               <Image src={abb} className={styles.logo} alt="" />
             </div>
@@ -37,6 +43,7 @@ const Footer = () => {
               <Image src={mäl} className={styles.logo} alt="" />
             </div>
           </div>
+          </div>
         </div>
       </div>
       {/*  Mitten grid */}
@@ -44,6 +51,10 @@ const Footer = () => {
         <div className={styles.footerLinksWrapper}>
           <div className={styles.links}>
             <FooterLinks />
+            
+          </div>
+          <div className={styles.mobileLinks}>
+            <FooterLinksMobile />
           </div>
         </div>
       </div>
@@ -65,6 +76,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
