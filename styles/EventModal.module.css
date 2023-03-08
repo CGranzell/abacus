@@ -219,7 +219,7 @@
 @media (max-width: 500px) {
   .modalContent {
      width: 75%;
-    height: 65%; 
+    height: 85%; 
     /* background-color: white;
     padding: 25px;
     border: 1px solid #8d8d8d; */
@@ -256,7 +256,7 @@
 .leftContainer {
   width: 100%;
   margin-bottom: 4rem;
-   height: 40%;
+   height: 60%;
   /* display: flex;
   align-items: center;
   justify-content: center;
@@ -264,7 +264,7 @@
 }
 
 .leftWrapper {
-  height: 50%;
+  height: 100%;
   width: 70%;
   /* display: flex;
   flex-direction: column;
@@ -272,13 +272,13 @@
 }
 .rightMidContainer {
   /* width: 100%; */
-  height: 100%;
+  height: 80%;
   /* overflow-y: scroll; */
   /* padding: 0 4%; */
 }
 .rightTopContainer {
+  height: 18%;
   /* width: 100%;
-  height: 25%;
   display: flex;
   justify-content: space-between;
   padding: 0 4%; */
