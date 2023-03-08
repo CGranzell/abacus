@@ -159,67 +159,103 @@
 }
 
 /* Media Queries */
-@media (max-width: 699px) {
+/* Laptop */
+@media (max-width: 1200px) {
   .topContainer {
-    height: auto;
-    flex-direction: column;
+    height: 25rem;
+    /* width: 100%;
+    display: flex; */
   }
+}
+/* Tablet */
+@media (max-width: 800px) {
+  .topContainer {
+    height: 30rem;
+    /* width: 100%;
+    display: flex; */
+  }
+
   .bottomContainer {
-    height: 50%;
-
-    flex-direction: column;
+    height: 25rem;
+    /* width: 100%;
+    display: flex;
+    background-color: #f1f1f1; */
   }
-
+  
+}
+/* Mobile */
+@media (max-width: 500px) {
   .topLeftContainer {
     display: none;
+    /* height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
   }
 
+  .topContainer {
+    height: 30rem;
+    background-color: #f1f1f1;
+    /* width: 100%;
+    display: flex; */
+  }
+
+  .titleContainer h3{
+    font-size: 1.6rem;
+    font-weight: 100;
+  }
   .topRightContainer {
-    height: 15rem;
+    /* margin-top: 2rem; */
+    /* height: 100%; */
     width: 100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
   }
 
-  .topRightContainer h3 {
-    font-size: 0.8rem;
-    margin-bottom: 0rem;
-  }
-  .topRightContainer p {
-    font-size: 0.5rem;
+  .bottomContainer {
+    flex-direction: column-reverse;
+     height: 50rem;
+    /* width: 100%;
+    display: flex;
+    background-color: #f1f1f1;  */
   }
 
-  .bottomLeftContainer {
-    height: 15rem;
-    width: 100%;
-  }
-  .bottomLeftContainer h3 {
-    font-size: 0.8rem;
-    margin-bottom: 0rem;
-  }
-  .bottomLeftContainer p {
-    font-size: 0.5rem;
-  }
   .bottomRightContainer {
     height: 50%;
     width: 100%;
-    display: none;
+     /* display: flex;
+    justify-content: center;
+    align-items: center;  */
   }
-}
 
-@media (max-width: 415px) {
-  .topRightContainer h3 {
-    font-size: 0.7rem;
+  .bottomLeftContainer {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
   }
+
+  .bottomImgContainer {
+    height: 60%;
+    width: 100%;
+    /* position: relative; */
+  }
+
+ 
   .topRightContainer p {
-    font-size: 0.4rem;
+    /* font-size: 0.8rem; */
     line-height: 1rem;
   }
 
-  .bottomLeftContainer h3 {
-    font-size: 0.7rem;
+  .h1 {
+    color: #808080;
+    background-color: black;
+    font-weight: 100;
   }
-  .bottomLeftContainer p {
-    font-size: 0.4rem;
-    line-height: 1rem;
-    margin-bottom: 1rem;
-  }
+  
 }

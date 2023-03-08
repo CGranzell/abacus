@@ -10,7 +10,7 @@ const page = () => {
     <div className={styles.mainContainer}>
       <div className={styles.imgContainer}>
         <div className={styles.h1Wrapper}>
-          <h1 className={styles.h1}>Om Oss</h1>
+          <h1 className={styles.h1}>Om oss</h1>
         </div>
         <Image src={math} alt="" sizes="true" className={styles.mathImg} />
       </div>
