@@ -12,16 +12,18 @@ const page = () => {
       {/* <div className={styles.headerContainer}> */}
       <div className={styles.imgContainer}>
         <div className={styles.h1Wrapper}>
-          <h1 className={styles.h1}>Kontakta Oss</h1>
+          <h1 className={styles.h1}>Kontakta oss</h1>
         </div>
         <Image src={math} alt="" sizes="true" className={styles.mathImg} />
       </div>
 
       {/* </div> */}
       <div className={styles.mainCardContainer}>
+        <div className={styles.mainWrapper}>
         <div className={styles.visitText}>
           <p>Besök någon av våra sidor för att läsa mer</p>
         </div>
+
 
         <div className={styles.cardContainer}>
           <div className={styles.cardWrapper}>
@@ -31,7 +33,7 @@ const page = () => {
               h2={'ABB-Gymnasiet'}
             />
           </div>
-          <div className={styles.lineContainer}></div>
+          
           <div className={styles.cardWrapper}>
             <Card
               href={'https://fryx.se/'}
@@ -39,7 +41,7 @@ const page = () => {
               h2={'Fryxellska skolan'}
             />
           </div>
-          <div className={styles.lineContainer}></div>
+          
           <div className={styles.cardWrapper}>
             <Card
               href={'https://www.misv.se/'}
@@ -47,6 +49,7 @@ const page = () => {
               h2={'Mälardalens international school'}
             />
           </div>
+        </div>
         </div>
       </div>
     </div>
