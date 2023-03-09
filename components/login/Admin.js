@@ -73,8 +73,8 @@ const Admin = ({ setIsLoggedIn, user }) => {
                   </button>
               </div>
               <table className={styles.table}>
-                  <div className={styles.thead}></div>
-                <thead >
+                  
+                <thead className={styles.thead}>
                   <tr >
 
                     <th className={styles.thTitle}>Titel</th>

@@ -83,11 +83,12 @@ const EditEventModal = ({ children, shown, close, event }) => {
             <LoadingSpinner />
           ) : (
             <>
+            <div className={styles.requiredContainer}>* = Obligatoriskt fält</div>
               <div className={styles.titleContainer}>
                 <div className={styles.formTitleContainer}>
                   <p>Titel</p>
                   {!isValid && (
-                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                    <p className={styles.errorMessage}>*</p>
                   )}
                 </div>
                 <input
@@ -103,7 +104,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
                 <div className={styles.formTitleContainer}>
                   <p>Text</p>
                   {!isValid && (
-                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                    <p className={styles.errorMessage}>*</p>
                   )}
                 </div>
 
@@ -120,7 +121,7 @@ const EditEventModal = ({ children, shown, close, event }) => {
                 <div className={styles.formTitleContainer}>
                   <p>Datum</p>
                   {!isValid && (
-                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                    <p className={styles.errorMessage}>*</p>
                   )}
                 </div>
                 <input

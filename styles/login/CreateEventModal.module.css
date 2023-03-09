@@ -13,7 +13,7 @@
 
 .modalContent {
   width: 50%;
-  height: 80%;
+  height: 90%;
   background-color: white;
   padding: 25px;
   position: relative;
@@ -37,9 +37,17 @@
   padding: 0.5rem 0rem;
 }
 
+.requiredContainer {
+  font-size: 0.7rem;
+  color: red;
+  display: flex;
+  align-items: center;
+}
+
 /* Rubrik */
 .formTitleContainer {
   width: 12%;
+  display: flex;
 }
 .input {
   width: 78%;
@@ -53,6 +61,7 @@
 .timeText {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 /* Titel */
@@ -121,23 +130,43 @@
 
 /* felmeddelande */
 .errorMessage {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: red;
 }
 
-@media (max-width: 699px) {
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1200px) {
+
+}
+/* Tablet */
+@media (max-width: 800px) {
+
+}
+/* Mobile */
+@media (max-width: 500px) {
   .modalContent {
-    width: 85%;
-    height: 70%;
-    padding: 10px;
+    width: 90%;
+    /* height: 90%;
+    background-color: white;
+    position: relative; */
+    padding: 15px;
+  }
+  
+  .formTitleContainer p{
+      font-size: 0.7rem;
+      
   }
 
-  .formTitleContainer {
-    width: 12%;
-    font-size: 0.6rem;
+  .dateInput {
+    width: 29%;
+    margin-left: 4%;
   }
 
-  .errorMessage {
-    font-size: 0.3rem;
-  }
+  /* .timeText {
+    display: flex;
+    justify-content: flex-end;
+    
+  } */
+  
 }

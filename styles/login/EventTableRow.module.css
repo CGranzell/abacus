@@ -28,18 +28,30 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 699px) {
-  .tr {
-    font-size: 0.6rem;
-  }
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1200px) {
+
+}
+/* Tablet */
+@media (max-width: 800px) {
+
+}
+/* Mobile */
+@media (max-width: 500px) {
   .tdText {
-    padding: 0 4%;
+    display: none;
   }
 
-  .iconEdit {
-    font-size: 1rem;
+  .tdLink{
+    display: none;
   }
-  .iconDelete {
-    font-size: 1rem;
+
+  .tdTitle,
+  .tdDate {
+    font-size: 0.8rem;
   }
+
+  
 }

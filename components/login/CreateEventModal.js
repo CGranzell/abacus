@@ -63,11 +63,12 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
         <GrClose className={styles.closeBtn} onClick={close} />
 
         <form className={styles.mainContainer}>
+        <div className={styles.requiredContainer}>* = Obligatoriskt fält</div>
           <div className={styles.titleContainer}>
             <div className={styles.formTitleContainer}>
               <p>Titel</p>
               {!isValid && (
-                <p className={styles.errorMessage}> * Obligatorisk </p>
+                <p className={styles.errorMessage}>*</p>
               )}
             </div>
             <input
@@ -86,7 +87,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
                 <div className={styles.formTitleContainer}>
                   <p>Text</p>
                   {!isValid && (
-                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                    <p className={styles.errorMessage}>*</p>
                   )}
                 </div>
                 <textarea
@@ -101,7 +102,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
                 <div className={styles.formTitleContainer}>
                   <p>Datum</p>
                   {!isValid && (
-                    <p className={styles.errorMessage}> * Obligatorisk </p>
+                    <p className={styles.errorMessage}>*</p>
                   )}
                 </div>
                 <input
