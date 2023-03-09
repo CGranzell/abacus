@@ -14,3 +14,25 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1200px) {
+
+}
+/* Tablet */
+@media (max-width: 800px) {
+
+}
+/* Mobile */
+@media (max-width: 500px) {
+  .textContainer h1{
+    /* height: 7rem;
+    width: 100%; */
+    font-size: 1rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+}
