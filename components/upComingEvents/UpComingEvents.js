@@ -20,7 +20,7 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
   useEffect(() => {
     const getEvents = async () => {
       const data = await getDocs(eventsCollectionRef);
-      console.log(data);
+      // console.log(data);
 
       setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };

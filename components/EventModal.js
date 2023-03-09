@@ -12,7 +12,7 @@ const EventModal = ({ children, shown, close, event }) => {
   const day = event.date.slice(8, 10);
   const year = event.date.slice(0, 4);
 
-  console.log(event.date);
+  // console.log(event.date);
 
   return shown ? (
     <div
