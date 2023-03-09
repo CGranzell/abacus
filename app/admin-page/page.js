@@ -14,12 +14,12 @@ const page = () => {
   const monitorAuthState = async () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(`${user.email} är inloggad från admin sidan`);
+        // console.log(`${user.email} är inloggad från admin sidan`);
         // Visa inloggat läge
         setUser(user);
         setIsLoggedIn(true);
       } else {
-        console.log(`${user} är utloggad`);
+        // console.log(`${user} är utloggad`);
         // Visa inloggningsformulär
         setIsLoggedIn(false);
         router.push(`/login-page`);
