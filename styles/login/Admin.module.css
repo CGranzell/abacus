@@ -152,7 +152,32 @@
 }
 /* Tablet */
 @media (max-width: 800px) {
+  .addEventBtn {
+    height: 2rem;
+    width: 50%;
+    margin-left: 25%;
+    /* border-radius: 6px; */
+    /* cursor: pointer; */
+    /* background-color: #388e57; */
+    /* color: white; */
+    /* border: none; */
+    font-size: 0.8rem;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+  }
+  .addIcon {
+    /* background-color: white;
+    border-radius: 50%;
+    color: #388e57;
+    border: none; */
+    font-size: 0.9rem;
+    /* transition: 0.3 ease-in-out; */
+  }
 
+  .tBody {
+    font-size: 0.6rem;
+  }
 }
 /* Mobile */
 @media (max-width: 500px) {

@@ -213,12 +213,8 @@
   
   .mainWrapper{
     width: 75%;
-    /* display: flex;
-    border: 1px solid red; */
 }
-
 }
-
 @media (min-width: 800px) {
   .hamburgerOpen,
   .hamburgerClosed {
@@ -231,27 +227,13 @@
 @media (max-width: 500px) {
   .mainWrapper{
     width: 90%;
-    /* display: flex;
-    border: 1px solid red; */
 }
   .logo {
-    /* height: 100%;
-    width: 100%;
-    object-fit: contain;
-    transition: 0.3s ease-in-out;
-    position: absolute; */
     left: 0rem;
   }
 
   .hamburgerClosed {
-    /* position: absolute;
-    top: 1rem; */
     right: 1.4rem;
-    /* height: 30px;
-    width: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; */
   }
 }
 
