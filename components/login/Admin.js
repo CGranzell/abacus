@@ -68,15 +68,16 @@ const Admin = ({ setIsLoggedIn, user }) => {
             <div className={styles.tableContainer}>
               <div className={styles.rowAboveTable}>
                 <h2>Events</h2>
-                  <button onClick={toggleCreateModalShown} className={styles.addEventBtn} > 
-                    Skapa nytt event <HiPlusSm className={styles.addIcon} />
-                  </button>
+                <button
+                  onClick={toggleCreateModalShown}
+                  className={styles.addEventBtn}
+                >
+                  Skapa nytt event <HiPlusSm className={styles.addIcon} />
+                </button>
               </div>
               <table className={styles.table}>
-                  
                 <thead className={styles.thead}>
-                  <tr >
-
+                  <tr>
                     <th className={styles.thTitle}>Titel</th>
                     <th className={styles.thText}>Text</th>
                     <th className={styles.thDate}>Datum</th>
@@ -84,7 +85,7 @@ const Admin = ({ setIsLoggedIn, user }) => {
                     <th className={styles.thEdit}>Redigera</th>
                   </tr>
                 </thead>
-                 
+
                 {events.map((event) => {
                   return (
                     <tbody key={event.id} className={styles.tBody}>

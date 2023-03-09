@@ -28,23 +28,14 @@
   transform: scale(1.1);
 }
 
-
 /* Media Queries */
-/* Laptop */
-@media (max-width: 1200px) {
-
-}
-/* Tablet */
-@media (max-width: 800px) {
-
-}
 /* Mobile */
 @media (max-width: 500px) {
   .tdText {
     display: none;
   }
 
-  .tdLink{
+  .tdLink {
     display: none;
   }
 
@@ -52,6 +43,4 @@
   .tdDate {
     font-size: 0.8rem;
   }
-
-  
 }

@@ -11,7 +11,7 @@ const NavItem = () => {
     <>
       {MENU_LIST.map((item, key) => {
         return (
-          <Link key={key} href={item.href} >
+          <Link key={key} href={item.href}>
             {item.text}
           </Link>
         );

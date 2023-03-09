@@ -163,92 +163,59 @@
 @media (max-width: 1200px) {
   .topContainer {
     height: 25rem;
-    /* width: 100%;
-    display: flex; */
   }
 }
 /* Tablet */
 @media (max-width: 800px) {
   .topContainer {
     height: 30rem;
-    /* width: 100%;
-    display: flex; */
   }
 
   .bottomContainer {
     height: 25rem;
-    /* width: 100%;
-    display: flex;
-    background-color: #f1f1f1; */
   }
-  
 }
 /* Mobile */
 @media (max-width: 500px) {
   .topLeftContainer {
     display: none;
-    /* height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
   }
 
   .topContainer {
     height: 30rem;
     background-color: #f1f1f1;
-    /* width: 100%;
-    display: flex; */
   }
 
-  .titleContainer h3{
+  .titleContainer h3 {
     font-size: 1.6rem;
     font-weight: 100;
   }
   .topRightContainer {
-    /* margin-top: 2rem; */
-    /* height: 100%; */
     width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
   }
 
   .bottomContainer {
     flex-direction: column-reverse;
-     height: 50rem;
-    /* width: 100%;
-    display: flex;
-    background-color: #f1f1f1;  */
+    height: 50rem;
   }
 
   .bottomRightContainer {
     height: 50%;
     width: 100%;
-     /* display: flex;
-    justify-content: center;
-    align-items: center;  */
   }
 
   .bottomLeftContainer {
     height: 50%;
     width: 100%;
     margin-bottom: 5rem;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
   }
 
   .bottomImgContainer {
     height: 60%;
     width: 100%;
-    /* position: relative; */
   }
 
- 
   .topRightContainer p {
-    /* font-size: 0.8rem; */
     line-height: 1rem;
   }
 
@@ -257,5 +224,4 @@
     background-color: black;
     font-weight: 100;
   }
-  
 }

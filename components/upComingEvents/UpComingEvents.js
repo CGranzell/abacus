@@ -34,22 +34,21 @@ const UpComingEvents = forwardRef(({ onBackClick }, ref) => {
 
   return (
     <div className={styles.mainContainer} ref={ref}>
-    <div className={styles.mainWrapper}>
-
-      <div className={styles.headerContainer}>
-        <h1>Kommande events</h1>
-      </div>
-
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <div className={styles.cardContainer}>
-          {sortedEvents.slice(0, 6).map((event) => {
-            return <EventCard key={event.id} event={event} />;
-          })}
+      <div className={styles.mainWrapper}>
+        <div className={styles.headerContainer}>
+          <h1>Kommande events</h1>
         </div>
-      )}
-    </div>
+
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <div className={styles.cardContainer}>
+            {sortedEvents.slice(0, 6).map((event) => {
+              return <EventCard key={event.id} event={event} />;
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 });

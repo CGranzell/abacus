@@ -29,8 +29,6 @@ const EventCard = ({ event }) => {
           </div>
           {/* Månad och Dag*/}
           <div className={styles.monthDateContainer}>
-            {/* <p>{event.date.substring(5, 10)}</p> */}
-            
             <p>{day}</p>
             <p> {month}</p>
           </div>

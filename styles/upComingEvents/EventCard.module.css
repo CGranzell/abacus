@@ -67,7 +67,6 @@
 .pContainer {
   height: 60%;
   width: 90%;
-  /* margin-left: 2%; */
   display: flex;
   align-items: center;
   font-size: 0.6rem;
@@ -99,36 +98,14 @@
 }
 
 /* Media Queries */
-/* Laptop */
-@media (max-width: 1200px) {
-
-}
 /* Tablet */
 @media (max-width: 800px) {
-
   .titleContainer {
-    /* height: 20%;
-    width: 90%;
-    margin-left: 2%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; */
     font-size: 0.8rem;
-    /* font-weight: bold; */
   }
 
   .pContainer {
     height: 60%;
-    /* width: 90%; */
-    /* margin-left: 2%; */
-    /* display: flex;
-    align-items: center; */
     font-size: 0.5rem;
-    /* padding: 10px 10px 15px 10px; */
   }
 }
-/* Mobile */
-@media (max-width: 500px) {
-
-}
-

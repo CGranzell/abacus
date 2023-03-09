@@ -22,14 +22,8 @@ const FooterLinksMobile = () => {
       </div>
       <div className={styles.bottomRowLinks}>
         <Link href={'/login-page'}>
-        
-
           <BsPerson className={styles.iconAdmin} />
-          <p>
-
-          Logga in Admin
-          </p>
-        
+          <p>Logga in Admin</p>
         </Link>
       </div>
     </>

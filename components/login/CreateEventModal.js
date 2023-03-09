@@ -63,13 +63,11 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
         <GrClose className={styles.closeBtn} onClick={close} />
 
         <form className={styles.mainContainer}>
-        <div className={styles.requiredContainer}>* = Obligatoriskt fält</div>
+          <div className={styles.requiredContainer}>* = Obligatoriskt fält</div>
           <div className={styles.titleContainer}>
             <div className={styles.formTitleContainer}>
               <p>Titel</p>
-              {!isValid && (
-                <p className={styles.errorMessage}>*</p>
-              )}
+              {!isValid && <p className={styles.errorMessage}>*</p>}
             </div>
             <input
               className={styles.input}
@@ -86,9 +84,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
               <div className={styles.textContainer}>
                 <div className={styles.formTitleContainer}>
                   <p>Text</p>
-                  {!isValid && (
-                    <p className={styles.errorMessage}>*</p>
-                  )}
+                  {!isValid && <p className={styles.errorMessage}>*</p>}
                 </div>
                 <textarea
                   className={styles.input}
@@ -101,9 +97,7 @@ const CreateEventModal = ({ children, shown, close, eventsCollectionRef }) => {
               <div className={styles.dateContainer}>
                 <div className={styles.formTitleContainer}>
                   <p>Datum</p>
-                  {!isValid && (
-                    <p className={styles.errorMessage}>*</p>
-                  )}
+                  {!isValid && <p className={styles.errorMessage}>*</p>}
                 </div>
                 <input
                   className={styles.dateInput}

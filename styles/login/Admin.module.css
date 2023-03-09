@@ -85,7 +85,6 @@
 }
 .thead {
   width: 100%;
- 
 }
 
 /* Tabell head */
@@ -146,33 +145,16 @@
 }
 
 /* Media Queries */
-/* Laptop */
-@media (max-width: 1200px) {
-
-}
 /* Tablet */
 @media (max-width: 800px) {
   .addEventBtn {
     height: 2rem;
     width: 50%;
     margin-left: 25%;
-    /* border-radius: 6px; */
-    /* cursor: pointer; */
-    /* background-color: #388e57; */
-    /* color: white; */
-    /* border: none; */
     font-size: 0.8rem;
-    /* display: flex; */
-    /* justify-content: space-evenly; */
-    /* align-items: center; */
   }
   .addIcon {
-    /* background-color: white;
-    border-radius: 50%;
-    color: #388e57;
-    border: none; */
     font-size: 0.9rem;
-    /* transition: 0.3 ease-in-out; */
   }
 
   .tBody {
@@ -182,87 +164,52 @@
 /* Mobile */
 @media (max-width: 500px) {
   .rowAboveTable {
-    
-    /* height: 5rem;
-    width: 100%;
-    display: flex; */
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-start;
-    /* padding: 0 2%;
-    background-color: white; */
   }
-  .rowAboveTable h2{
-   font-size: 1.1rem;
-   font-weight: 100;
-   margin-bottom: 1rem;
+  .rowAboveTable h2 {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
   }
 
   .addEventBtn {
     height: 2rem;
     width: 50%;
     margin-left: 25%;
-    /* border-radius: 6px; */
-    /* cursor: pointer; */
-    /* background-color: #388e57; */
-    /* color: white; */
-    /* border: none; */
     font-size: 0.8rem;
-    /* display: flex; */
-    /* justify-content: space-evenly; */
-    /* align-items: center; */
   }
 
-
   .addIcon {
-    /* background-color: white;
-    border-radius: 50%;
-    color: #388e57;
-    border: none; */
     font-size: 1rem;
-    /* transition: 0.3 ease-in-out; */
   }
 
   .thText {
     display: none;
-    /* width: 30%;
-    text-align: left; */
   }
 
   .thLink {
     display: none;
-    /* width: 15%;
-    text-align: left; */
   }
 
   .thTitle {
     width: 40%;
-    /* text-align: left;
-    padding: 0 2%; */
   }
-  
-  
-  
+
   .thDate {
     width: 30%;
-    /* text-align: left; */
   }
-  
-  
-  
+
   .thEdit {
     width: 30%;
   }
 
   .thead {
     display: none;
-    /* width: 100%;
-    background-color: #ff0000; */
   }
 
   .tBody:nth-child(even) {
     background-color: #00000029;
   }
-
-
 }

@@ -135,38 +135,19 @@
 }
 
 /* Media Queries */
-/* Laptop */
-@media (max-width: 1200px) {
-
-}
-/* Tablet */
-@media (max-width: 800px) {
-  
-}
 /* Mobile */
 @media (max-width: 500px) {
   .modalContent {
     width: 90%;
-    /* height: 90%;
-    background-color: white;
-    position: relative; */
     padding: 15px;
   }
-  
-  .formTitleContainer p{
-      font-size: 0.7rem;
-      
+
+  .formTitleContainer p {
+    font-size: 0.7rem;
   }
 
   .dateInput {
     width: 29%;
     margin-left: 4%;
   }
-
-  /* .timeText {
-    display: flex;
-    justify-content: flex-end;
-    
-  } */
-  
 }
