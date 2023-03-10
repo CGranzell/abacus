@@ -141,10 +141,14 @@
 }
 
 /* Media Queries */
+/* Tablet */
+@media (max-width: 800px) {
+
+}
 /* Mobile */
 @media (max-width: 500px) {
   .modalContent {
-    height: 45%;
+    height: 50%;
     width: 90%;
     padding: 15px;
   }
