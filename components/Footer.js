@@ -68,9 +68,7 @@ const Footer = () => {
                 <Link href={'/'}>
                   <FaInstagramSquare className={styles.icon} />
                 </Link>
-                <Link href={'/'}>
-                  <FaLinkedin className={styles.icon} />
-                </Link>
+               
               </div>
             </div>
           </div>
