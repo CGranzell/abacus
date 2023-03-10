@@ -143,7 +143,11 @@
 /* Media Queries */
 /* Tablet */
 @media (max-width: 800px) {
-
+  .modalContent {
+    height: 70%;
+    width: 90%;
+   
+  }
 }
 /* Mobile */
 @media (max-width: 500px) {
