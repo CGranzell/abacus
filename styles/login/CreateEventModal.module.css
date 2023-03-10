@@ -138,7 +138,7 @@
 /* Mobile */
 @media (max-width: 500px) {
   .modalContent {
-    height: 50%;
+    height: 60%;
     width: 90%;
     padding: 15px;
   }
