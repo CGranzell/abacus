@@ -17,13 +17,14 @@
   width: 70%;
   display: flex;
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 .logoWrapper {
   height: 70px;
   width: 100%;
   position: relative;
-  /* border: 1px solid black; */
+  
 }
 
 .logo {
@@ -33,6 +34,7 @@
   transition: 0.3s ease-in-out;
   position: absolute;
   left: -2.3rem;
+  /* border: 1px solid black; */
 }
 
 .logo:hover {
@@ -214,9 +216,9 @@
   .mainWrapper {
     width: 90%;
   }
-  .logo {
+  /* .logo {
     left: 0rem;
-  }
+  } */
 
   .hamburgerClosed {
     right: 1.4rem;
