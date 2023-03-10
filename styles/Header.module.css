@@ -213,9 +213,9 @@
 
 /* Mobile */
 @media (max-width: 500px) {
-  .mainWrapper {
+  /* .mainWrapper {
     width: 90%;
-  }
+  } */
   /* .logo {
     left: 0rem;
   } */
