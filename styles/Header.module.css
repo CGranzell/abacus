@@ -216,7 +216,16 @@
   } 
    .logo {
     left: 0rem;
+    object-fit: fill;
   } 
+  /* .logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    left: -2.3rem;
+  } */
 
   .hamburgerClosed {
     right: 1.4rem;
