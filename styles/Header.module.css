@@ -207,6 +207,10 @@
   .hamburgerClosed {
     display: none;
   }
+  .logo {
+   
+    object-fit: fill;
+  } 
 }
 
 /* Mobile */
