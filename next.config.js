@@ -5,7 +5,6 @@ const nextConfig = {
   },
   env: {
     apiKey: 'AIzaSyCKxxcBNdf_2OEMMquJ5LYnNQAYtkYg6qw',
-
     authDomain: 'abacus-camp.firebaseapp.com',
     projectId: 'abacus-camp',
     storageBucket: 'abacus-camp.appspot.com',
