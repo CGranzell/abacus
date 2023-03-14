@@ -4,14 +4,19 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    apiKey: 'AIzaSyCKxxcBNdf_2OEMMquJ5LYnNQAYtkYg6qw',
-    authDomain: 'abacus-camp.firebaseapp.com',
-    projectId: 'abacus-camp',
-    storageBucket: 'abacus-camp.appspot.com',
-    messagingSenderId: '19598447285',
-    appId: '1:19598447285:web:d4c9de7956317df4aae4fc',
-    measurementId: 'G-2S5FFW8RT9',
+    API_KEY: process.env.API_KEY,
+    AUTH_DOMAIN: process.env.AUTH_DOMAIN,
+    PROJECT_ID: process.env.PROJECT_ID,
+    STORAGE_BUCKET: process.env.STORAGE_BUCKET,
+    MESSAGING_SENDER_ID: process.env.MESSAGING_SENDER_ID,
+    APP_ID: process.env.APP_ID,
+    MEASURMENT_ID: process.env.MEASURMENT_ID,
   },
 };
 
 module.exports = nextConfig;
+
+
+// env: {
+ // EXMAPLE_ENVIRONMENT_VARIABLE: process.env.EXMAPLE_ENVIRONMENT_VARIABLE,
+//},
