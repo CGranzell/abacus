@@ -9,7 +9,6 @@ import Link from 'next/link';
 import {
   FaFacebookSquare,
   FaInstagramSquare,
-  FaLinkedin,
 } from 'react-icons/fa';
 import FooterLinksMobile from './FooterLinksMobile';
 

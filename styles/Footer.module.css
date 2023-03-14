@@ -164,7 +164,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* border: 1px solid black; */
 }
 
 .socialWrapper {
@@ -172,7 +171,6 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
 }
 
 .textSocial {
@@ -181,14 +179,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px solid black; */
-  /* height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border: 1px solid black; */
 }
 .textSocial h3 {
   font-size: 0.8rem;
@@ -200,7 +190,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px solid black; */
 }
 
 .icon {
@@ -217,20 +206,18 @@
 }
 
 /* PoweredByHiq */
-.poweredByContainer{
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* border: 1px solid black; */
+.poweredByContainer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.poweredByImgContainer{
+.poweredByImgContainer {
   margin-right: 3%;
   height: 70%;
   width: 90%;
-  /* border: 1px solid black; */
   position: relative;
 }
 
@@ -241,12 +228,8 @@
     width: 75%;
   }
 
-  .poweredByImgContainer{
+  .poweredByImgContainer {
     margin-left: 30%;
-    /* height: 70%;
-    width: 90%;
-    border: 1px solid black;
-    position: relative; */
   }
 }
 /* Mobile */
@@ -315,47 +298,30 @@
   }
 
   .rightGridContainer {
-    /* height: 100%; */
-    /* width: 40%; */
-    /* display: flex; */
-    /* flex-direction: column; */
     align-items: flex-start;
-    /* border: 1px solid black; */
   }
 
   .iconsSocial {
     margin-left: 10%;
-    /* height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border: 1px solid black; */
   }
   .socialWrapper {
-    /* height: 50%; */
     width: 100%;
     height: 30%;
-    /* display: flex;
-    flex-direction: column;
-    border: 1px solid black; */
   }
 
-  .poweredByContainer{
+  .poweredByContainer {
     height: 50%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* border: 1px solid black; */
-}
+  }
 
-.poweredByImgContainer{
-  margin-left: 0%;
-  margin-right: 60%;
-  height: 70%;
-  width: 50%;
-  /* border: 1px solid black; */
-  position: relative;
-}
+  .poweredByImgContainer {
+    margin-left: 0%;
+    margin-right: 60%;
+    height: 70%;
+    width: 50%;
+    position: relative;
+  }
 }
