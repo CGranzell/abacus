@@ -227,9 +227,10 @@
 }
 
 .poweredByImgContainer{
+  margin-right: 3%;
   height: 70%;
   width: 90%;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   position: relative;
 }
 
@@ -240,9 +241,13 @@
     width: 75%;
   }
 
-  /* .iconsSocial {
-    width: 100%;
-  } */
+  .poweredByImgContainer{
+    margin-left: 30%;
+    /* height: 70%;
+    width: 90%;
+    border: 1px solid black;
+    position: relative; */
+  }
 }
 /* Mobile */
 @media (max-width: 500px) {
@@ -346,6 +351,8 @@
 }
 
 .poweredByImgContainer{
+  margin-left: 0%;
+  margin-right: 60%;
   height: 70%;
   width: 50%;
   /* border: 1px solid black; */
