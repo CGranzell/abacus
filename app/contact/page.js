@@ -1,10 +1,10 @@
 import styles from './page.module.css';
 import Image from 'next/image';
 import Card from '../../components/contact/Card';
-import abb from '../../public/images/abb-logga.png';
 import fryx from '../../public/images/fryx-logga.png';
-import mäl from '../../public/images/mälar-logga.png';
+import mal from '../../public/images/mälar-logga.png';
 import math from '../../public/images/elev-grey.png';
+import hitachi from '../../public/images/hitachi-bild.png'
 
 const page = () => {
   return (
@@ -23,9 +23,9 @@ const page = () => {
           <div className={styles.cardContainer}>
             <div className={styles.cardWrapper}>
               <Card
-                href={'https://www.abbgymnasiet.se/'}
-                img={abb}
-                h2={'ABB-Gymnasiet'}
+                href={'https://vasteras.hitachigymnasiet.se/'}
+                img={hitachi}
+                h2={'Hitachi Gymnasiet'}
               />
             </div>
             <div className={styles.cardWrapper}>
@@ -38,7 +38,7 @@ const page = () => {
             <div className={styles.cardWrapper}>
               <Card
                 href={'https://www.misv.se/'}
-                img={mäl}
+                img={mal}
                 h2={'Mälardalens international school'}
               />
             </div>
