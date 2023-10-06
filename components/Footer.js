@@ -1,6 +1,6 @@
 import styles from '../styles/Footer.module.css';
 import Image from 'next/image';
-import abb from '../public/images/abb-logga.png';
+import abacusBild from '../public/images/abacus-bild.png';
 import hitachi from '../public/images/hitachi-bild.png';
 import fryx from '../public/images/fryx-logga.png';
 import mäl from '../public/images/mälar-logga.png';
@@ -8,7 +8,7 @@ import poweredByHiq from '../public/Powered by HiQ.svg';
 import FooterLinks from './FooterLinks';
 import Link from 'next/link';
 import {
-  FaFacebookSquare,
+  
   FaInstagramSquare,
 } from 'react-icons/fa';
 import FooterLinksMobile from './FooterLinksMobile';
@@ -64,19 +64,17 @@ const Footer = () => {
               <h3>Hitta oss på sociala medier</h3>
             </div>
             <div className={styles.iconsSocial}>
-              <Link href={'/'}>
-                <FaFacebookSquare className={styles.icon} />
-              </Link>
-              <Link href={'/'}>
+              
+              <Link href={'https://www.instagram.com/abacuscamp1/'}>
                 <FaInstagramSquare className={styles.icon} />
               </Link>
             </div>
           </div>
           <div className={styles.poweredByContainer}>
             <div className={styles.poweredByImgContainer}>
-              <Link href="https://www.hiq.se">
+              <Link href="#">
                 <Image
-                  src={poweredByHiq}
+                  src={abacusBild}
                   className={styles.logo}
                   alt="logo"
                   priority

@@ -1,10 +1,10 @@
-import styles from './page.module.css';
-import Image from 'next/image';
-import Card from '../../components/contact/Card';
-import fryx from '../../public/images/fryx-logga.png';
-import mal from '../../public/images/mälar-logga.png';
-import math from '../../public/images/elev-grey.png';
-import hitachi from '../../public/images/hitachi-bild.png'
+import styles from "./page.module.css";
+import Image from "next/image";
+import Card from "../../components/contact/Card";
+import fryx from "../../public/images/fryx-logga.png";
+import mal from "../../public/images/mälar-logga.png";
+import math from "../../public/images/elev-grey.png";
+import hitachi from "../../public/images/hitachi-bild.png";
 
 const page = () => {
   return (
@@ -18,28 +18,36 @@ const page = () => {
       <div className={styles.mainCardContainer}>
         <div className={styles.mainWrapper}>
           <div className={styles.visitText}>
-            <p>Besök någon av våra sidor för att läsa mer</p>
+            <h4>Kontakt:</h4> <br/>
+            <div className={styles.contactPersonContainer}>
+
+            <p>Ahmad Alali</p>    <p>ahmad.alali@misv.se </p>
+            <p>0729276012</p>
+            </div>
+          </div>
+          <div className={styles.samarbetsContainer}>
+            <p>Våra samarbetspartners </p>
           </div>
           <div className={styles.cardContainer}>
             <div className={styles.cardWrapper}>
               <Card
-                href={'https://vasteras.hitachigymnasiet.se/'}
+                href={"https://vasteras.hitachigymnasiet.se/"}
                 img={hitachi}
-                h2={'Hitachi Gymnasiet'}
+                h2={"Hitachi Gymnasiet"}
               />
             </div>
             <div className={styles.cardWrapper}>
               <Card
-                href={'https://fryx.se/'}
+                href={"https://fryx.se/"}
                 img={fryx}
-                h2={'Fryxellska skolan'}
+                h2={"Fryxellska skolan"}
               />
             </div>
             <div className={styles.cardWrapper}>
               <Card
-                href={'https://www.misv.se/'}
+                href={"https://www.misv.se/"}
                 img={mal}
-                h2={'Mälardalens international school'}
+                h2={"Mälardalens international school"}
               />
             </div>
           </div>
