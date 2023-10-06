@@ -1,9 +1,9 @@
-import React from 'react';
-import styles from './page.module.css';
-import Image from 'next/image';
-import math from '../../public/images/elev-grey.png';
-import omOssTop from '../../public/images/about-us-grey.png';
-import omOssBottom from '../../public/images/linjal-grey.png';
+import React from "react";
+import styles from "./page.module.css";
+import Image from "next/image";
+import math from "../../public/images/elev-grey.png";
+import omOssTop from "../../public/images/about-us-grey.png";
+import omOssBottom from "../../public/images/linjal-grey.png";
 
 const page = () => {
   return (
@@ -34,26 +34,26 @@ const page = () => {
               </div>
               <div className={styles.contentWrapper}>
                 <div className={styles.lineContainer}> </div>
-                <div className={styles.textContainer}>
+                <div className={styles.textContainerBackground}>
                   <p>
-                    Projektgruppen som har utvecklat ABACUSCAMP är: <br />{' '}
+                    Projektgruppen som har utvecklat ABACUSCAMP är: <br />{" "}
                     <b> -Christer Norström</b>, professor och ordförande
-                    stiftelsen Fryx, ordförande ABB Gymnasiet, <br />{' '}
+                    stiftelsen Fryx, ordförande Hitachi Gymnasiet, <br />{" "}
                     <b>-Petra Nygård</b>, rektor Mälardalen International
                     School, <br />
                     <b>-Peter Kallioniemi</b>, matematiklärare Fryxellska
-                    skolan, <br /> <b>-Lisa Engström</b>, AIoch
-                    programmeringsexpert ABB Gymnasiet,
+                    skolan, <br /> 
+                    <b>-Lisa Engström</b>, AI-och programmeringsexpert Hitachi Gymnasiet,
                     <br />
-                    <b>-Emmy Henriksson</b>, lärarassistent ABB Gymnasiet,
+                    <b>-Emmy Henriksson</b>, lärarassistent Hitachi Gymnasiet,
                     <br />
                     <b>-Ahmad Alali</b>, Civilingenjörstudent MDU och
                     lärarassistent Mälardalen International School,
                     <br />
                     <b>-Laith Ali Basha</b>, Civilingenjörstudent KTH,
                     <br />
-                    <b>-Joakim Flink</b>, AI-lärare ABB Gymnasiet, <br />
-                    <b>-Tina Degerstedt</b>, förälder <br />{' '}
+                    <b>-Joakim Flink</b>, AI-lärare Hitachi Gymnasiet, <br />
+                    <b>-Tina Degerstedt</b>, eldsjäl och VD Kvadrat Västerås  <br />{" "}
                     <b>-Andreas Wiik</b>, VD/skolchef/rektor Fryxellska skolan.
                   </p>
                 </div>
@@ -70,19 +70,26 @@ const page = () => {
               </div>
               <div className={styles.contentWrapper}>
                 <div className={styles.lineContainer}> </div>
-                <div className={styles.textContainer}>
+                <div className={styles.textContainerBackground}>
                   <p>
                     För speciellt intresserade och särskilt begåvade elever inom
                     matematik, teknik och naturvetenskap finns idag alltför få
-                    utmaningar. <br /> Elever med särskild begåvning behöver bli
-                    stimulerade och få möta likasinnade elever för att inte
-                    tappa motivationen eller hamna i utanförskap.
-                    <br /> Forskning visar att många talangfulla elever
-                    underpresterar för att passa in i den svenska skolan (Sims
-                    2021). <br />
-                    Vi vill bemöta behoven hos dessa elever som i brist på
-                    motivation och utmaning riskerar att bli s.k. hemmasittare
-                    eller att drabbas av psykisk ohälsa.
+                    utmaningar. Elever med särskild begåvning behöver bli
+                    stimulerande och få möta likasinnade elever för att inte
+                    tappa motivationen eller hamna i utanförskap. Forskning
+                    visar att många talangfulla elever underpresterar för att
+                    passa in i den svenska skolan (Sims 2021). Vi vill bemöta
+                    behoven hos dessa elever som i brist på motivation och
+                    utmaning riskerar att bli s.k hemmasittande eller att
+                    drabbas av psykisk ohälsa. AbacusCamp ska bedriva verksamhet
+                    för högstadie- och gymnasieelever som har särskilt intresse
+                    för matematik, teknik och naturvetenskap där de kan träffa
+                    likasinnade elever. Koncept är att under ledning av
+                    engagerade och kunniga coacher som själva är studerande
+                    (idag Mälardalens Universitet och Kungliga Tekniska
+                    Högskolan) utmana och bejaka nyfikenhet att vilja lära sig
+                    nya saker och våga misslyckas för att växa inom områden som
+                    matematik, teknik, naturvetenskap och språk.
                   </p>
                 </div>
               </div>

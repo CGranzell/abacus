@@ -36,6 +36,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /*  Top container */
@@ -90,10 +91,11 @@
   background-color: red;
 }
 
-.textContainer {
+.textContainerBackground {
   width: 97%;
   height: 100%;
   margin-left: 2%;
+  overflow: hidden;
 }
 
 .topRightContainer h3 {
@@ -110,10 +112,11 @@
 
 /*  Bottom container */
 .bottomContainer {
-  height: 20rem;
+  height: 30rem;
   width: 100%;
   display: flex;
   background-color: #f1f1f1;
+ 
 }
 
 /* bottom left container */
@@ -172,9 +175,18 @@
   }
 
   .bottomContainer {
-    height: 25rem;
+    height: 35rem;
   }
 }
+
+/* Tablet */
+@media (max-width: 675px) {
+ 
+  .bottomContainer {
+    height: 40rem;
+  }
+}
+
 /* Mobile */
 @media (max-width: 500px) {
   .topLeftContainer {
@@ -196,7 +208,7 @@
 
   .bottomContainer {
     flex-direction: column-reverse;
-    height: 50rem;
+    height: 65rem;
   }
 
   .bottomRightContainer {
@@ -208,6 +220,7 @@
     height: 50%;
     width: 100%;
     margin-bottom: 5rem;
+    
   }
 
   .bottomImgContainer {
