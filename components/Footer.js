@@ -1,6 +1,7 @@
 import styles from '../styles/Footer.module.css';
 import Image from 'next/image';
 import abb from '../public/images/abb-logga.png';
+import hitachi from '../public/images/hitachi-bild.png';
 import fryx from '../public/images/fryx-logga.png';
 import mäl from '../public/images/mälar-logga.png';
 import poweredByHiq from '../public/Powered by HiQ.svg';
@@ -33,7 +34,7 @@ const Footer = () => {
             <div className={styles.imgLogoContainer}>
               <div className={styles.imgWrapperContainer}>
                 <div className={styles.imgWrapper}>
-                  <Image src={abb} className={styles.logo} alt="" />
+                  <Image src={hitachi} className={styles.logo} alt="" />
                 </div>
                 <div className={styles.imgWrapper}>
                   <Image src={fryx} className={styles.logo} alt="" />
