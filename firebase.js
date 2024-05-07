@@ -3,9 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from '@firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
+ const API_KEY = AIzaSyCKxxcBNdf_2OEMMquJ5LYnNQAYtkYg6qw
+
+
 
 const firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_API_KEY,
+    apiKey: process.env.API_KEY,
     authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
     databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL,
     projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
@@ -21,7 +24,7 @@ const firebaseConfig = {
   
   };
   
-  console.log(process.env.NEXT_PUBLIC_API_KEY);
+  console.log(process.env.API_KEY);
   console.log("hello");
 
 
